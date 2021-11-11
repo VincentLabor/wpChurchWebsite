@@ -1,0 +1,456 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+$primary: black;
+$secondary: #83c5be;
+$background: #c5e4e1;
+
+//This is variables for screen sizes
+// $phone: 18em;
+// $smallMonitor: 50em;
+$xl: 1440px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+* {
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	line-height: 1.5;
+}
+.blk {
+	background-color: black;
+}
+
+.blueText {
+	color: royalblue;
+}
+
+.GrayText {
+	color: gray;
+}
+
+.lightGrayText{
+	color: lightgray;
+}
+
+.dateFont-size {
+	font-size: 1.3em;
+}
+
+.submitBtn {
+	background: inherit;
+	border: 1px black solid;
+}
+.whitesubmitBtn {
+	background: inherit;
+	border: 1px white solid;
+}
+
+.grayBck {
+	background-color: #f9f9fb;
+}
+
+body {
+	// font-family: "Source Sans Pro", sans-serif;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 18px;
+	line-height: 1.25;
+}
+
+.flex {
+	display: flex;
+}
+
+.centerflex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: inherit;
+}
+
+
+
+.menuItemPadding{
+	padding: 1em 1em 0 1em
+}
+.centerflexColumn {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.centerflexLeft {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.centerText {
+	text-align: center;
+}
+
+.eventContainer {
+	width: 100%;
+}
+
+body {
+	width: 100%;
+}
+
+.width90 {
+	width: 90%;
+}
+
+.fillWidth {
+	width: 100%;
+}
+
+/* Padding */
+
+.top4EMPadding {
+	padding-top: 4em;
+}
+.top2EMPadding {
+	padding-top: 2em;
+}
+.top1EMPadding {
+	padding-top: 1em;
+}
+
+.bot4EMPadding {
+	padding-bottom: 4em;
+}
+
+.bot2p5EMPadding {
+	padding-bottom: 2.5em;
+}
+
+.bot3EMPadding {
+	padding-bottom: 3em;
+}
+.bot2EMPadding {
+	padding-bottom: 2em;
+}
+
+.bot1p5EMPadding {
+	padding-bottom: 1.5em;
+}
+
+.bot1EMPadding {
+	padding-bottom: 1em;
+}
+
+.botp5EMPadding {
+	padding-bottom: 0.5em;
+}
+
+.right1EmPadding {
+	padding-right: 1em;
+}
+
+.bot3emMargin {
+	margin-bottom: 3em;
+}
+
+.home-banner {
+	height: 100vh;
+	// background: #c5e4e1;
+	background: black;
+
+	background-size: cover;
+}
+
+#wrapper-navbar {
+	.container {
+		padding-top: 2em;
+	}
+}
+
+.extra-info {
+	text-align: center;
+}
+.socialBtns {
+	width: 10px;
+	height: 5em;
+	text-align: center;
+	a {
+		color: $primary;
+		.fa {
+			color: $secondary;
+		}
+		.fa:hover {
+			color: darken($color: $secondary, $amount: 20%);
+		}
+	}
+}
+
+// margin-bottom: -360px;
+.top-header-holder {
+	background: #f1f1f1;
+	height: 260px;
+
+	//This is the toggle menu
+	.navMenu {
+		width: 3em;
+	}
+
+	.menu-text {
+		margin-top: 2em;
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+
+	@media (min-width: $xl) {
+		.navMenu {
+			display: none;
+		}
+	}
+}
+
+
+//This is for the navbar and this does affect it in the array.
+.menuCenter{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: black;
+}
+
+#main-nav {
+	border-top: 1px solid black;
+}
+
+ul {
+	//This puts space around the menu items.
+	flex: 1;
+	justify-content: center;
+	li {
+		a {
+			//This is every specific menu item.
+			font-weight: 200;
+			// text-transform: uppercase;
+			font-size: 18px;
+			padding: 1em 1em;
+			@media (max-width: $xl) {
+				font-size: 20px;
+				padding: 1em 0.33em;
+			}
+		}
+		&.current_page_item {
+			a {
+				color: $secondary;
+			}
+		}
+	}
+}
+
+nav {
+	.container {
+		.logo {
+			width: 4em;
+			height: 3em;
+		}
+		@media (max-width: $lg) {
+			.logo {
+				width: 3em;
+				height: 2.5em;
+			}
+		}
+		.menu-bar {
+			height: 2px;
+			background-color: $secondary;
+			border-radius: 2px;
+			margin-bottom: 4px;
+		}
+	}
+}
+
+.jwalkLogo {
+	width: 20em;
+}
+
+.letterSpace {
+	letter-spacing: 1.75px;
+}
+
+.section-break {
+	border: none;
+	border-top: 1px solid #ddd;
+	margin: 2.5rem 0;
+}
+
+.page-banner__bg-image {
+	opacity: 0.33;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.flexImage{
+	display: flex;
+	justify-content: center;
+}
+
+.page-banner__content {
+	position: relative;
+	z-index: 2;
+}
+
+.textWhite {
+	color: white;
+}
+.textBlack {
+	color: black;
+}
+
+.page-banner {
+	background-color: #000;
+	padding: 5em 0 4em 0;
+	position: relative;
+	height: 30vh;
+}
+.centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	height: 100vh;
+}
+
+.centeredItem {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+svg path {
+	will-change: transform;
+	fill: transparent;
+	stroke-width: 3;
+	stroke: white;
+	stroke-dasharray: 1717.66552734375;
+	stroke-dashoffset: 1717.66552734375;
+	animation: line-anim 3s ease forwards;
+}
+
+.eventInfo {
+	width: 80%;
+}
+
+.eventDate {
+	width: 20%;
+}
+
+.eventItem {
+}
+
+// .eventItem:hover{
+//     height: 100px;
+//     background: red;
+//     position: relative;
+// }
+// .eventItem:hover:before{
+//     content: '';
+//     position: absolute;
+//     top: 0; right: 0;
+//     border-top: 80px solid pink;
+//     border-left: 80px solid red;
+//     width: 0;
+// }
+
+//  .eventItem:hover:before{
+//  	content: '';
+//  	position: absolute;
+//  	top: 0; right: 0;
+//  	border-top: 5em solid white;
+//  	border-left: 80px solid #F9F9FB;
+//  	width: 0;
+//  }
+
+.eventItem:hover {
+	background-color: #f9f9fb;
+	height: 50%;
+	position: relative;
+}
+.eventItem:hover:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-top: 30px solid white;
+	border-left: 30px solid white;
+	width: 0;
+}
+
+.eventItem2:hover {
+	background-color: #f9f9fb;
+	height: 50%;
+	position: relative;
+}
+.eventItem2:hover:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-bottom: 30px solid white;
+	border-left: 30px solid #f9f9fb;
+	width: 0;
+}
+
+.thumbnailSize{
+	height: 5em;
+	width: 7em;
+	margin: 0 1em 0 1em;
+}
+
+.silver-background {
+	background: #e1e5f2;
+}
+
+#counselor-program {
+	background: #1f7a8c;
+}
+
+// #logo path:nth-child(0) {
+// }
+
+@keyframes line-anim {
+	from {
+		fill: transparent;
+	}
+	to {
+		stroke-dashoffset: 0;
+		fill: white;
+	}
+}
+
+@keyframes fillers {
+	to {
+		fill: black;
+	}
+}
+
+//Media Queries for page responsiveness
+
+// $xl: 1440px;
+// $lg: 992px;
+// $md: 768px;
+// $sm: 576px;
+
+@media screen and (min-width: $md) {
+}
+@media screen and (min-width: $xl) {
+	.width100 {
+		width: 100%;
+	}
+	.width60 {
+		width: 50%;
+	}
+	.horizFlex {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row;
+	}
+}
