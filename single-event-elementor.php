@@ -15,7 +15,7 @@ while (have_posts()) {
 
         </a>
       
-      <!-- <span class=""><?php// the_title(); ?></span> -->
+      <span class=""><?php the_title(); ?></span>
       </p>
     </div>
     <div class=""><?php the_content(); ?></div>

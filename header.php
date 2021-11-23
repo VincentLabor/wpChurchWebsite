@@ -27,11 +27,11 @@ $container = get_theme_mod('understrap_container_type');
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 	<?php do_action('wp_body_open'); ?>
-	<div class="site flexspace menuCenter" id="page">
+	<div class="site menuCenter" id="page">
 
 		<!-- ******************* The Navbar Area ******************* -->
 		<div id="wrapper-navbar menuCenter">
-			<a href="http://localhost/wordpress/" class=" whiteText"> jesuswalkyouth </a>
+			<a href="/" class=" whiteText"> jesuswalkyouth </a>
 			<!-- This is the area above the menu -->
 			<!-- 			
 			<div class="top-header-holder">

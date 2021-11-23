@@ -87,7 +87,7 @@ body {
 	text-align: center;
 }
 
-.eventContainer {
+.fullWidthContainer {
 	width: 100%;
 }
 
@@ -150,10 +150,26 @@ body {
 	margin-bottom: 3em;
 }
 
+.absolute{
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	opacity: .2;
+}
+
+.landingCaption{
+	z-index: 20;
+}
+
+.bgimage{
+	background-image: url("../../img/randomImage.jpg");
+}
+
 .home-banner {
 	height: 100vh;
 	// background: #c5e4e1;
-	background: black;
+	 background: black;
+
 
 	background-size: cover;
 }
@@ -304,6 +320,12 @@ nav {
 	color: black;
 }
 
+.imageBox{
+	border: solid white 1px;
+	height: 20em;
+	width: 15em;
+}
+
 .page-banner {
 	background-color: #000;
 	padding: 5em 0 4em 0;
@@ -315,6 +337,13 @@ nav {
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
+	height: 100vh;
+}
+.centeredHeading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	height: 100vh;
 }
 
