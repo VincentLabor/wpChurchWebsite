@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: NOTFULLWIDTH Event Template
+Template Name: For Elementor Event Template
 Template Post Type: event, testimonial
 */
 

@@ -2,7 +2,7 @@
 
 
 /*
-Template Name: Headeronly Conference
+Template Name:  Conference /w PageBanner
 Template Post Type: conference
 */
 
@@ -12,7 +12,7 @@ while (have_posts()) {
   the_post();
   pageBanner();
 ?>
-
+<div class=""><?php the_content(); ?></div>
   <hr class="section-break">
 
 <?php }

@@ -1,5 +1,11 @@
 <?php
 
+/*
+Template Name: NOTFULLWIDTH Event Template
+Template Post Type: event, testimonial
+*/
+
+
 get_header();
 
 while (have_posts()) {
@@ -7,7 +13,7 @@ while (have_posts()) {
   pageBanner();
 ?>
 
-  <div class="fullWidthContainer">
+  <div class="container">
     <div class="">
       <p>
         <a class="textBlack" href="<?php echo get_post_type_archive_link('event'); ?>">
@@ -15,7 +21,7 @@ while (have_posts()) {
 
         </a>
       
-      <span class=""><?php the_title(); ?></span>
+      <!-- <span class=""><?php //the_title(); ?></span> -->
       </p>
     </div>
     <div class=""><?php the_content(); ?></div>

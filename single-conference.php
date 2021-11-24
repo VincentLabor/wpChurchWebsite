@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: FULLCUSTOM Conference Item
+Template Name: Full Custom Conference
 Template Post Type: conference
 */
 
@@ -13,14 +13,7 @@ while (have_posts()) {
 ?>
 
   <!-- <div class="fullWidthContainer"> -->
-  <div class="container">
-    <div class="">
-      <p>
-      <span class=""><?php the_title(); ?></span>
-      </p>
-    </div>
-    <div class=""><?php the_content(); ?></div>
-  </div>
+
 
   <hr class="section-break">
 
