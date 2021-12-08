@@ -1,20 +1,18 @@
 <?php
 
-/*
-Template Name: Full Custom Conference
-Template Post Type: conference
-*/
-
 get_header();
 
 while (have_posts()) {
   the_post();
-  
+  pageBanner();
 ?>
-
-  <!-- <div class="fullWidthContainer"> -->
-
-
+  <div class="container">
+    <div class="">
+      <p>
+      </p>
+    </div>
+    <div class=""><?php the_content(); ?></div>
+  </div>
   <hr class="section-break">
 
 <?php }

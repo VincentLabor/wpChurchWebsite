@@ -78,6 +78,7 @@ $container = get_theme_mod('understrap_container_type');
 					/img/circle.png" alt="Jwalk Logo" class="logo"> -->
 
 				</div>
+				<a href="<?php echo wp_login_url(); ?>" class="btn btn--small btn--orange float-left push-right">Login</a>
 				<button class="navbar-toggler navMenu flexspace" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'understrap'); ?>">
 					<i class="fa fa-bars"></i>
 					<!-- This is mobile menu stuff -->

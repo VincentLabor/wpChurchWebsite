@@ -71,7 +71,7 @@ function pageBanner($args = NULL)
 <!-- Initially any edits did not appear because of the error that was within the sass/gulp -->
 <div class="page-banner bot3emMargin">
     <div class="page-banner__bg-image flexImage">
-      <img src="<?php echo $args['photo']; ?>" alt="">
+      <img src="<?php echo $args['photo']; ?>" alt="" class="bannerImg">
     </div>
     <div class="page-banner__content container container--narrow">
       <h1 class="page-banner__title textWhite"><?php echo $args['title'] ?></h1>
