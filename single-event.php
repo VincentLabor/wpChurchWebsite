@@ -7,7 +7,7 @@ while (have_posts()) {
   pageBanner();
 ?>
 
-  <div class="fullWidthContainer">
+  <div class="container">
     <div class="">
       <p>
         <a class="textBlack" href="<?php echo get_post_type_archive_link('event'); ?>">

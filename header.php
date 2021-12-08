@@ -78,7 +78,7 @@ $container = get_theme_mod('understrap_container_type');
 					/img/circle.png" alt="Jwalk Logo" class="logo"> -->
 
 				</div>
-				<a href="<?php echo wp_login_url(); ?>" class="btn btn--small btn--orange float-left push-right">Login</a>
+
 				<button class="navbar-toggler navMenu flexspace" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'understrap'); ?>">
 					<i class="fa fa-bars"></i>
 					<!-- This is mobile menu stuff -->
@@ -101,7 +101,15 @@ $container = get_theme_mod('understrap_container_type');
 					)
 				);
 				?>
+
+				<!-- This section determines if the login/register buttons appear or not.  -->
 				<?php if ('container' === $container) : ?>
+					<?php if (!is_user_logged_in()) { ?>
+						<a href="<?php echo wp_login_url(); ?>" class="loginBtn">Login</a>
+						<a href="<?php echo esc_url(site_url("/wp-signup.php")); ?>" class="loginBtn">Register</a>
+					<?php } else { ?>
+						<a href="<?php echo wp_logout_url(); ?>" class="loginBtn">logout</a>
+					<?php }; ?>
 			</div><!-- .container -->
 		<?php endif; ?>
 
