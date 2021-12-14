@@ -103,3 +103,66 @@ function noSubsAdminBar()
     show_admin_bar(false);
   }
 }
+
+//Customize login screen
+// 1st object is the thing you wish to change
+//2nd object is the function that you wish to return instead.
+add_filter("login_headerurl", "ourHeaderUrl");
+
+function ourHeaderUrl()
+{
+  return esc_url(site_url("/"));
+}
+
+
+//This affects the styling of the login page.
+add_action("login_enqueue_scripts", "ourLoginCSS");
+function ourLoginCSS()
+{
+?>
+
+  <style type="text/css">
+    /* Fix me */
+    body.login div#login h1 a {
+      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/JW_WHITE.png);
+      margin-bottom: 3em;
+    }
+
+    body.login div#login p#nav a {
+      color: white;
+    }
+
+    body.login div#login p#backtoblog a {
+      color: white;
+    }
+
+    body.login {
+      background: black;
+    }
+  </style>
+
+<?php
+}
+
+//Adding text to login page is borked
+// add_filter('login_headertext','ourLoginTitle');
+
+// function ourLoginTitle(){
+//   return "Jesuswalk Youth Conference";
+// }
+
+//Depending if user is logged in or not will display different menus.
+function conditional_menu($args = NULL)
+{
+  if (!is_user_logged_in()) {
+    $args['menu'] = 'my-main-header-menu';
+  } else if (is_user_logged_in()) {
+    $args['menu'] = 'logged-in-menu';
+  }
+  return $args;
+}
+
+add_filter('wp_nav_menu_args', 'conditional_menu');
+ //subscriber
+
+ 

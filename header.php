@@ -63,7 +63,7 @@ $container = get_theme_mod('understrap_container_type');
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
 
-		<nav id="main-nav" class="navbar navbar-expand-lg background blk whiteText " aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar navbar-expand-lg background blk whiteText" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e('Main Navigation', 'understrap'); ?>
@@ -82,33 +82,37 @@ $container = get_theme_mod('understrap_container_type');
 				<button class="navbar-toggler navMenu flexspace" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'understrap'); ?>">
 					<i class="fa fa-bars"></i>
 					<!-- This is mobile menu stuff -->
-					<div class="menu-text"></div>
+
 				</button>
-				<a></a>
 
 				<!-- The WordPress Menu goes here -->
 				<?php
-				wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse flexspace',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu', //this is just semantic and there is no actual class. 
-						'depth'           => 3,
-						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+				if (is_user_logged_in(
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'container_class' => 'collapse navbar-collapse flexspace',
+							'container_id'    => 'navbarNavDropdown',
+							'menu_class'      => 'navbar-nav',
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu', //this is just semantic and there is no actual class. 
+							'depth'           => 3,
+							'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+						)
 					)
-				);
+				));
+
 				?>
 
 				<!-- This section determines if the login/register buttons appear or not.  -->
 				<?php if ('container' === $container) : ?>
 					<?php if (!is_user_logged_in()) { ?>
-						<a href="<?php echo wp_login_url(); ?>" class="loginBtn">Login</a>
-						<a href="<?php echo esc_url(site_url("/wp-signup.php")); ?>" class="loginBtn">Register</a>
+						<!-- <a href="<?php echo wp_login_url(); ?>" data-toggle="dropdown" class="loginBtn collapse navbar-collapse flexspace navbarNavDropdown">Login</a>
+						<a href="<?php echo wp_registration_url(); ?>" data-toggle="dropdown" class="loginBtn collapse navbar-collapse flexspace">Register</a> -->
 					<?php } else { ?>
-						<a href="<?php echo wp_logout_url(); ?>" class="loginBtn">logout</a>
+						<!-- <a href="" class="navbar-nav collapse navbar-collapse flexspace">Profile</a>
+						<a href="<?php echo wp_logout_url(); ?>" data-toggle="dropdown" class="loginBtn collapse navbar-collapse flexspace">logout</a> -->
+
 					<?php }; ?>
 			</div><!-- .container -->
 		<?php endif; ?>
@@ -116,3 +120,7 @@ $container = get_theme_mod('understrap_container_type');
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->
+
+
+
+
