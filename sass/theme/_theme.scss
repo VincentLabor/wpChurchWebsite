@@ -1,6 +1,6 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 $primary: black;
-$secondary: #83c5be;
+$secondary: white;//#83c5be
 $background: #c5e4e1;
 
 //This is variables for screen sizes
@@ -26,7 +26,7 @@ $sm: 576px;
 }
 
 .blueText {
-	color: royalblue;
+	color: royalblue !important;
 }
 
 .GrayText {

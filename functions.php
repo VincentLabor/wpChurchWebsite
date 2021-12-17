@@ -82,6 +82,21 @@ function pageBanner($args = NULL)
 <?php
 }
 
+
+//Depending if user is logged in or not will display different menus.
+function conditional_menu($args = NULL)
+{
+  if (!is_user_logged_in()) {
+    $args['menu'] = 'my-main-header-menu';
+  } else if (is_user_logged_in()) {
+    $args['menu'] = 'logged-in-menu';
+  }
+  return $args;
+}
+
+add_filter('wp_nav_menu_args', 'conditional_menu');
+//subscriber
+
 //Redirecting basic users to homepage instead of dashboard.
 add_action('admin_init', 'redirectUserstoFrontEnd');
 function redirectUserstoFrontEnd()
@@ -93,6 +108,7 @@ function redirectUserstoFrontEnd()
     exit;
   }
 }
+
 //Removing the wp_admin bar thing
 add_action('wp_loaded', 'noSubsAdminBar');
 function noSubsAdminBar()
@@ -151,18 +167,30 @@ function ourLoginCSS()
 //   return "Jesuswalk Youth Conference";
 // }
 
-//Depending if user is logged in or not will display different menus.
-function conditional_menu($args = NULL)
+add_action('admin_post_nopriv_contact_form', 'prefix_send_email_to_admin');
+add_action('admin_post_contact_form', 'prefix_send_email_to_admin');
+
+function prefix_send_email_to_admin()
 {
-  if (!is_user_logged_in()) {
-    $args['menu'] = 'my-main-header-menu';
-  } else if (is_user_logged_in()) {
-    $args['menu'] = 'logged-in-menu';
+  if (isset($_POST["submitbtn"])) {
+
+    global $wpdb;
+
+    $data = array(
+      'fullname' => $_POST['fullname'],
+      'email' => $_POST['email'],
+      'message' => $_POST['message'],
+    );
+
+    $table_name = "registrants";
+
+    $result = $wpdb->insert($table_name, $data, $format = NULL);
+
+    if ($result == 1) {
+      wp_redirect("http://localhost/wordpress/");
+      exit;;
+    } else {
+      echo "<script>alert('There seems to be an error')</script>";
+    }
   }
-  return $args;
-}
-
-add_filter('wp_nav_menu_args', 'conditional_menu');
- //subscriber
-
- 
+};
