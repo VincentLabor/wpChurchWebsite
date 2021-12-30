@@ -18,17 +18,36 @@ get_header();
 <header>
     <div class="home-banner">
         <!-- This is the SVG of the animated anchor on the main page -->
-        
-     
-         <div class="centeredHeading width90 blk bgimage">
-             
-             <div class="absolute">
-              <image class="" src="<?php echo get_theme_file_uri('/img/bannerImage.png'); ?>"></image> 
-             </div>
-            <img src="<?php  echo get_template_directory_uri(); 
+        <div id="navMenu" class="hidden mobileMenuNav textWhite centerflex">
+            <!-- <div class="hidden mobileMenuNav"> -->
+            <?php
+				if (is_user_logged_in(
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'container_class' => 'collapse navbar-collapse flexspace',
+							'container_id'    => 'navbarNavDropdown',
+							'menu_class'      => 'navbar-nav hideMobileMenu',
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu', //this is just semantic and there is no actual class. 
+							'depth'           => 3,
+							'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+						)
+					)
+				));
+
+				?>
+        </div>
+
+        <div class="centeredHeading width90 blk bgimage">
+
+            <div class="absolute">
+                <image class="" src="<?php echo get_theme_file_uri('/img/bannerImage.png'); ?>"></image>
+            </div>
+            <img src="<?php echo get_template_directory_uri();
                         ?>/img/JW_WHITE.png" alt="" class="jwalkLogo bot3EMPadding">
-                           <h4 class="landingCaption textWhite">“Whoever claims to live in him must live as Jesus did.”</h4>
-        </div> 
+            <h4 class="landingCaption textWhite">“Whoever claims to live in him must live as Jesus did.”</h4>
+        </div>
         <!-- <div class="imageBoxCotainer centerflex">
             <div class="imageBox"></div>
             <div class="imageBox"></div>
@@ -58,7 +77,8 @@ get_header();
                         </form>
                     </div>
 
-                    <img src="<?php //echo get_template_directory_uri(); ?> /img/aow.png" alt="" class="bot1EMPadding centerflexColumn">
+                    <img src="<?php //echo get_template_directory_uri(); 
+                                ?> /img/aow.png" alt="" class="bot1EMPadding centerflexColumn">
                 </div>
             </div>
 
@@ -72,7 +92,8 @@ get_header();
                         <p class="centerText centerflexColumn">Many people from our JesusWalk community will be showcasing the artistic talents that God has blessed them with. When it comes to worshiping God, there are endless possibilities! Join us on YouTube Live on April 30 - May 2 at 7-9pm.</p>
                     </div>
 
-                    <img src="<?php //echo get_template_directory_uri(); ?>/img/ChildrenPresents.PNG" alt="" class="bot1EMPadding centerflexColumn">
+                    <img src="<?php //echo get_template_directory_uri(); 
+                                ?>/img/ChildrenPresents.PNG" alt="" class="bot1EMPadding centerflexColumn">
                 </div>
 
                 <form action="http://localhost/wordpress/virtual-conference/" class="bot1EMPadding centerflex">
@@ -89,7 +110,7 @@ get_header();
 
         </div>
     </section> -->
-<!-- 
+    <!-- 
     <section id="registration" class="width90 bot3EMPadding centerflexColumn">
         <h3 class="top2EMPadding ">JesusWalk 2021 Youth Conference <strong>Registration</strong></h3>
         <h5 class=" ">Registration is now open!</h5>
@@ -105,7 +126,8 @@ get_header();
 
 
         <div class="game-nights centerflexColumn width90">
-            <img src="<?php// echo get_template_directory_uri(); ?> /img/gameNights.png" alt="">
+            <img src="<? php // echo get_template_directory_uri(); 
+                        ?> /img/gameNights.png" alt="">
             <div class="centerflexColumn">
                 <h4 class="top1EMPadding">Game Nights</h4>
 
@@ -113,18 +135,23 @@ get_header();
                     <h6>May 15, 2021 || 8:00 PM</h6>
 
                     <?php //$homepageEvents = new WP_Query(array(
-               //         'posts_per_page' => -1,
-                 //       'post_type' => 'event',
-                   // ));
+                    //         'posts_per_page' => -1,
+                    //       'post_type' => 'event',
+                    // ));
 
-                   // while ($homepageEvents->have_posts()) {
-                       // $homepageEvents->the_post(); ?>
+                    // while ($homepageEvents->have_posts()) {
+                    // $homepageEvents->the_post(); 
+                    ?>
 
-                        <?php //$eventDate = new DateTime(get_field('event_date')); ?>
-                        <h6> <?php //echo $eventDate->format('d M Y'); ?> || <?php //the_title(); ?> </h6>
+                        <?php //$eventDate = new DateTime(get_field('event_date')); 
+                        ?>
+                        <h6> <?php //echo $eventDate->format('d M Y'); 
+                                ?> || <?php //the_title(); 
+                                        ?> </h6>
                         <h6> </h6>
 
-                    <?php //}; ?>
+                    <?php //}; 
+                    ?>
                     <h6>June 12, 2021 || 8:00 PM</h6>
                     <h6>July 10, 2021 || 8:00 PM</h6>
                 </div>
@@ -134,7 +161,8 @@ get_header();
             </div>
 
             <div class="counselor-panel top2EMPadding">
-                <img src="<?php //echo get_template_directory_uri(); ?> /img/counselorPanel.png" alt="">
+                <img src="<?php //echo get_template_directory_uri(); 
+                            ?> /img/counselorPanel.png" alt="">
                 <div class="centerflexColumn ">
                     <h4 class="top1EMPadding ">Counselor Panel</h4>
                     <h6>May 29, 2021 || 8:30 PM</h6>
@@ -146,7 +174,8 @@ get_header();
             </div>
 
             <div class="student-panel top2EMPadding">
-                <img src="<?php //echo get_template_directory_uri(); ?>  /img/studentPanel.png " alt="">
+                <img src="<?php //echo get_template_directory_uri(); 
+                            ?>  /img/studentPanel.png " alt="">
                 <div class="centerflexColumn">
                     <h4 class="top2EMPadding">Student Panel</h4>
                     <h6 class="top1EMPadding">June 5, 2021 || 8:30 PM</h6>
@@ -170,17 +199,22 @@ get_header();
             <div class="centerflex">
                 <button class="btn whitesubmitBtn whiteText ">Learn More</button>
             </div>
-            <img src="<?php //echo get_template_directory_uri(); ?> /img/counselorProgram.png" class="top2EMPadding" alt="">
+            <img src="<?php //echo get_template_directory_uri(); 
+                        ?> /img/counselorProgram.png" class="top2EMPadding" alt="">
         </div>
 
     </section> -->
     <!-- <section id="testimonials" class="silver-background ">
         <div class="width90 centerflexColumn">
             <h4 class="top2EMPadding">Testimonials from our Students</h4>
-            <img src="<?php //echo get_template_directory_uri(); ?> /img/testimonialImg1.png" class="top1EMPadding" alt="">
-            <img src="<?php //echo get_template_directory_uri(); ?> /img/testimonialImg2.png" class="top1EMPadding" alt="">
-            <img src="<?php //echo get_template_directory_uri(); ?> /img/testimonialImg3.png" class="top1EMPadding" alt="">
-            <img src="<?php //echo get_template_directory_uri(); ?> /img/testimonialImg4.png" class="top1EMPadding" alt="">
+            <img src="<?php //echo get_template_directory_uri(); 
+                        ?> /img/testimonialImg1.png" class="top1EMPadding" alt="">
+            <img src="<?php //echo get_template_directory_uri(); 
+                        ?> /img/testimonialImg2.png" class="top1EMPadding" alt="">
+            <img src="<?php //echo get_template_directory_uri(); 
+                        ?> /img/testimonialImg3.png" class="top1EMPadding" alt="">
+            <img src="<?php //echo get_template_directory_uri(); 
+                        ?> /img/testimonialImg4.png" class="top1EMPadding" alt="">
         </div>
     </section> -->
     <section id="connect-through-prayer" class=" silver-background">

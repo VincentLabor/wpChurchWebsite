@@ -94,7 +94,7 @@ function conditional_menu($args = NULL)
   return $args;
 }
 
-add_filter('wp_nav_menu_args', 'conditional_menu');
+add_filter('wp_nav_menu_args', 'conditional_menu'); //filter determines how things are displayed
 //subscriber
 
 //Redirecting basic users to homepage instead of dashboard.
@@ -167,29 +167,37 @@ function ourLoginCSS()
 //   return "Jesuswalk Youth Conference";
 // }
 
+//This will trigger once the submit button is clicked on
 add_action('admin_post_nopriv_contact_form', 'prefix_send_email_to_admin');
 add_action('admin_post_contact_form', 'prefix_send_email_to_admin');
 
 function prefix_send_email_to_admin()
 {
+  //Checks to see if submitbtn was triggerred
   if (isset($_POST["submitbtn"])) {
 
-    global $wpdb;
+    global $wpdb; //Allows us access to MYsql without creating statements 
 
+    //These are the items that are to be sent to the database
+    //Will need to create the table before hand before sending these items.
     $data = array(
       'fullname' => $_POST['fullname'],
       'email' => $_POST['email'],
       'message' => $_POST['message'],
     );
 
+    //This is the name of the table in the database
     $table_name = "registrants";
 
     $result = $wpdb->insert($table_name, $data, $format = NULL);
 
+    //If everything goes well, redirect user to front page
     if ($result == 1) {
       wp_redirect("http://localhost/wordpress/");
       exit;;
     } else {
+      //Need to implement a way to fix error handling on form submissions.
+      wp_redirect("http://localhost/wordpress/registration");
       echo "<script>alert('There seems to be an error')</script>";
     }
   }

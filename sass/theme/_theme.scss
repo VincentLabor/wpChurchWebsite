@@ -1,6 +1,6 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 $primary: black;
-$secondary: white;//#83c5be
+$secondary: white; //#83c5be
 $background: #c5e4e1;
 
 //This is variables for screen sizes
@@ -159,6 +159,10 @@ body {
 	opacity: 0.2;
 }
 
+.hidden {
+	display: none;
+}
+
 .landingCaption {
 	z-index: 20;
 }
@@ -169,9 +173,7 @@ body {
 
 .home-banner {
 	height: 100vh;
-	// background: #c5e4e1;
 	background: black;
-
 	background-size: cover;
 }
 
@@ -191,7 +193,7 @@ body {
 	text-align: center;
 }
 
-.loginBtn{
+.loginBtn {
 	color: white;
 	border: solid 1px white;
 	padding: 1em;
@@ -213,30 +215,8 @@ body {
 	}
 }
 
-// margin-bottom: -360px;
-.top-header-holder {
-	background: #f1f1f1;
-	height: 260px;
-
-	//This is the toggle menu
-	.navMenu {
-		width: 3em;
-	}
-
-	.menu-text {
-		margin-top: 2em;
-		font-size: 14px;
-		text-transform: uppercase;
-	}
-
-	@media (min-width: $xl) {
-		.navMenu {
-			display: none;
-		}
-	}
-}
-
 //This is for the navbar and this does affect it in the array.
+
 .menuCenter {
 	display: flex;
 	align-items: center;
@@ -246,7 +226,11 @@ body {
 
 #main-nav {
 	border-top: 1px solid black;
+	// @media(min-width:$lg){
+	// 	display: none;
+	// }
 }
+
 
 ul {
 	//This puts space around the menu items.
@@ -290,6 +274,12 @@ nav {
 			border-radius: 2px;
 			margin-bottom: 4px;
 		}
+	}
+}
+
+@media (min-width: $lg) {
+	.navMenu {
+		display: none;
 	}
 }
 
@@ -386,9 +376,6 @@ svg path {
 	width: 20%;
 }
 
-.eventItem {
-}
-
 // .eventItem:hover{
 //     height: 100px;
 //     background: red;
@@ -482,8 +469,23 @@ svg path {
 // $md: 768px;
 // $sm: 576px;
 
-@media screen and (min-width: $md) {
+
+
+@media screen and (max-width: $md) {
+.hideNavMenu{
+	display: none;
 }
+
+}
+
+
+@media screen and (min-width: $lg) {
+	.hideMobileMenu{
+		display: none;
+	}
+
+}
+
 @media screen and (min-width: $xl) {
 	.width100 {
 		width: 100%;
@@ -496,4 +498,12 @@ svg path {
 		justify-content: space-between;
 		flex-flow: row;
 	}
+}
+
+.mobileMenuNav {
+	background: black;
+	height: 100vh;
+	position: absolute;
+	z-index: 20000000;
+	width: 100vw;
 }

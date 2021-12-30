@@ -14,6 +14,7 @@ get_header();
 
 
 <div id="content">
+    <!-- POST the information to the admin-post and it will be tracked. -->
     <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
         <label for="fullname">Full Name</label>
 </br>
@@ -25,6 +26,7 @@ get_header();
         <label for="message">Your Message</label>
         <textarea name="message" id="message"></textarea>
         </br>
+        <!-- this hidden action with the value of contact_form is required. -->
         <input type="hidden" name="action" value="contact_form">
         <input type="submit" value="Send My Message" name="submitbtn">
     </form>

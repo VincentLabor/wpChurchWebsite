@@ -32,33 +32,6 @@ $container = get_theme_mod('understrap_container_type');
 		<!-- ******************* The Navbar Area ******************* -->
 		<div id="wrapper-navbar menuCenter">
 			<a href="/" class=" whiteText"> jesuswalkyouth </a>
-			<!-- This is the area above the menu -->
-			<!-- 			
-			<div class="top-header-holder">
-				<div class="container">
-					<div class="row">
-
-						<div class="extra-info col">
-							<p>This is the getup</p>
-							<p>A test of some osrtas</p>
-							<p>Please send help</p>
-						</div>
-						<div class="socialBtns col"> -->
-			<!-- <a href="https://www.instagram.com/jesuswalkyouth/?hl=en"></a> -->
-			<!-- <a href="https://www.instagram.com/jesuswalkyouth/?hl=en"><i class="fa fa-youtube fa-2x"></i></a>
-							<a href="https://www.instagram.com/jesuswalkyouth/?hl=en"><i class="fa fa-facebook fa-2x"></i></a> -->
-			<!-- </div>
-
-						<button class="navbar-toggler navMenu " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'understrap'); ?>">
-							<div class="menu-bar"></div>
-							<div class="menu-bar"></div>
-							<div class="menu-bar"></div>
-							<div class="menu-text">Menu</div>
-
-						</button>
-					</div>
-				</div> -->
-
 		</div>
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
@@ -71,18 +44,10 @@ $container = get_theme_mod('understrap_container_type');
 
 
 			<div class="container whiteText letterSpace ">
-				<div class="logo-holder whiteText ">
-					<!-- <img src="
-					<?php // echo get_template_directory_uri(); 
-					?>
-					/img/circle.png" alt="Jwalk Logo" class="logo"> -->
+				<!-- I will be turning off default data-toggle. -->
 
-				</div>
-
-				<button class="navbar-toggler navMenu flexspace" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'understrap'); ?>">
-					<i class="fa fa-bars"></i>
-					<!-- This is mobile menu stuff -->
-
+				<button class="navbar-toggler navMenu flexspace" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="">
+					<i id="navIcon" class="fa fa-bars"></i>
 				</button>
 
 				<!-- The WordPress Menu goes here -->
@@ -93,7 +58,7 @@ $container = get_theme_mod('understrap_container_type');
 							'theme_location'  => 'primary',
 							'container_class' => 'collapse navbar-collapse flexspace',
 							'container_id'    => 'navbarNavDropdown',
-							'menu_class'      => 'navbar-nav',
+							'menu_class'      => 'navbar-nav hideNavMenu',
 							'fallback_cb'     => '',
 							'menu_id'         => 'main-menu', //this is just semantic and there is no actual class. 
 							'depth'           => 3,
@@ -120,7 +85,3 @@ $container = get_theme_mod('understrap_container_type');
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->
-
-
-
-
