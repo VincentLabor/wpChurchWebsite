@@ -3,6 +3,8 @@ $primary: black;
 $secondary: white; //#83c5be
 $background: #c5e4e1;
 
+//The reason why the hover for everything was red was because of _reboot.scss at 185.
+
 //This is variables for screen sizes
 // $phone: 18em;
 // $smallMonitor: 50em;
@@ -17,12 +19,26 @@ $sm: 576px;
 	box-sizing: border-box;
 	line-height: 1.5;
 }
+
+nav .container .navbar-collapse {
+	color: white;
+}
+
+// .container .navbar-collapse a{
+// 	color: white;
+// }
+
+body {
+	height: 100%;
+}
+
 .blk {
 	background-color: black;
 }
 
 .fa-bars {
-	color: white;
+	//Test because gulp[ is not working
+	color: red;
 }
 
 .blueText {
@@ -35,6 +51,14 @@ $sm: 576px;
 
 .lightGrayText {
 	color: lightgray;
+}
+
+.removeScrollbar {
+	overflow: hidden;
+}
+
+.whiteText {
+	color: white;
 }
 
 .dateFont-size {
@@ -231,7 +255,6 @@ body {
 	// }
 }
 
-
 ul {
 	//This puts space around the menu items.
 	flex: 1;
@@ -248,12 +271,18 @@ ul {
 				padding: 1em 0.33em;
 			}
 		}
+
+		//This will determine the color of the current tab. Will return to this.
 		&.current_page_item {
 			a {
 				color: $secondary;
 			}
 		}
 	}
+}
+
+a .nav-link{
+	color: white;
 }
 
 nav {
@@ -376,29 +405,6 @@ svg path {
 	width: 20%;
 }
 
-// .eventItem:hover{
-//     height: 100px;
-//     background: red;
-//     position: relative;
-// }
-// .eventItem:hover:before{
-//     content: '';
-//     position: absolute;
-//     top: 0; right: 0;
-//     border-top: 80px solid pink;
-//     border-left: 80px solid red;
-//     width: 0;
-// }
-
-//  .eventItem:hover:before{
-//  	content: '';
-//  	position: absolute;
-//  	top: 0; right: 0;
-//  	border-top: 5em solid white;
-//  	border-left: 80px solid #F9F9FB;
-//  	width: 0;
-//  }
-
 .eventItem:hover {
 	background-color: #f9f9fb;
 	height: 50%;
@@ -469,21 +475,42 @@ svg path {
 // $md: 768px;
 // $sm: 576px;
 
-
+@media screen and (max-width: $md) {
+}
 
 @media screen and (max-width: $md) {
-.hideNavMenu{
-	display: none;
-}
-
-}
-
-
-@media screen and (min-width: $lg) {
-	.hideMobileMenu{
+	.hideNavMenu {
 		display: none;
 	}
 
+	.hideForMobile {
+		display: none;
+	}
+
+	//Event styles
+	.eventTitle {
+		font-size: 1em;
+	}
+
+	.colForMobile {
+		flex-direction: column;
+	}
+
+	.dateFont-size {
+		font-size: 1em;
+	}
+
+	//probably need to move the flex to left.
+}
+
+@media screen and (min-width: $lg) {
+	.hideMobileMenu {
+		display: none;
+	}
+
+	.hideOnDesktop {
+		display: none;
+	}
 }
 
 @media screen and (min-width: $xl) {

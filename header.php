@@ -51,12 +51,13 @@ $container = get_theme_mod('understrap_container_type');
 				</button>
 
 				<!-- The WordPress Menu goes here -->
+				<!-- The menu fix I did was add different nav classes that would hide either menu if in mobile or desktop view. -->
 				<?php
 				if (is_user_logged_in(
 					wp_nav_menu(
 						array(
 							'theme_location'  => 'primary',
-							'container_class' => 'collapse navbar-collapse flexspace',
+							'container_class' => 'collapse navbar-collapse flexspace colorwhite',
 							'container_id'    => 'navbarNavDropdown',
 							'menu_class'      => 'navbar-nav hideNavMenu',
 							'fallback_cb'     => '',

@@ -30,7 +30,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
   }
 
   .container,
@@ -75,7 +74,6 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  // height: 100vh;
 
   .nav-link {
     padding-right: 0;
@@ -108,7 +106,13 @@
 // When collapsed, prevent the toggleable navbar contents from appearing in
 // the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
 // on the `.navbar` parent.
-
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  // For always expanded or extra full navbars, ensure content aligns itself
+  // properly vertically. Can be easily overridden with flex utilities.
+  align-items: center;
+}
 
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
@@ -172,7 +176,6 @@
 
         .navbar-nav {
           flex-direction: row;
-          justify-content: flex-end;
 
           .dropdown-menu {
             position: absolute;

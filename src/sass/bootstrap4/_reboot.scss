@@ -49,7 +49,8 @@ body {
   @include font-size($font-size-base);
   font-weight: $font-weight-base;
   line-height: $line-height-base;
-  text-align: left; // 3asdadasd
+  color: $body-color;
+  text-align: left; // 3
   background-color: $body-bg; // 2
 }
 
@@ -183,13 +184,12 @@ sup { top: -.5em; }
 //
 
 a {
-//color: $link-color;
-  color: white;
+  color: $link-color;
   text-decoration: $link-decoration;
   background-color: transparent; // Remove the gray background on active links in IE 10.
 
   @include hover() {
-    color: red;
+    color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }
 }

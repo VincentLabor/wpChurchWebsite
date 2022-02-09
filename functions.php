@@ -95,7 +95,12 @@ function conditional_menu($args = NULL)
 }
 
 add_filter('wp_nav_menu_args', 'conditional_menu'); //filter determines how things are displayed
+//wp_nav_menu_args determines what menu will be displayed.
 //subscriber
+
+//If the navmenu breaks, just put wp-login.php as the link in the wordpress menu
+
+
 
 //Redirecting basic users to homepage instead of dashboard.
 add_action('admin_init', 'redirectUserstoFrontEnd');

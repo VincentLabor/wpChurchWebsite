@@ -17,15 +17,14 @@ get_header();
 
 <header>
     <div class="home-banner">
-        <!-- This is the SVG of the animated anchor on the main page -->
         <div id="navMenu" class="hidden mobileMenuNav textWhite centerflex">
-            <!-- <div class="hidden mobileMenuNav"> -->
+            <!-- This menu only appears on mobile and does not appear in desktop view. -->
             <?php
 				if (is_user_logged_in(
 					wp_nav_menu(
 						array(
 							'theme_location'  => 'primary',
-							'container_class' => 'collapse navbar-collapse flexspace',
+							'container_class' => 'collapse navbar-collapse flexspace ',
 							'container_id'    => 'navbarNavDropdown',
 							'menu_class'      => 'navbar-nav hideMobileMenu',
 							'fallback_cb'     => '',
@@ -37,6 +36,7 @@ get_header();
 				));
 
 				?>
+
         </div>
 
         <div class="centeredHeading width90 blk bgimage">
@@ -48,11 +48,6 @@ get_header();
                         ?>/img/JW_WHITE.png" alt="" class="jwalkLogo bot3EMPadding">
             <h4 class="landingCaption textWhite">“Whoever claims to live in him must live as Jesus did.”</h4>
         </div>
-        <!-- <div class="imageBoxCotainer centerflex">
-            <div class="imageBox"></div>
-            <div class="imageBox"></div>
-            <div class="imageBox"></div>
-        </div> -->
     </div>
 </header>
 <main class="">
@@ -126,7 +121,7 @@ get_header();
 
 
         <div class="game-nights centerflexColumn width90">
-            <img src="<? php // echo get_template_directory_uri(); 
+            <img src="<?php // echo get_template_directory_uri(); 
                         ?> /img/gameNights.png" alt="">
             <div class="centerflexColumn">
                 <h4 class="top1EMPadding">Game Nights</h4>
@@ -227,21 +222,6 @@ get_header();
             </div>
         </div>
     </section>
-    <!-- <section id="covid19-response" class="">
-        <div class="width90 centerflexColumn">
-            <h4 class="top2EMPadding">
-                COVID-19 Response and the JesusWalk Community
-            </h4>
-            <p>The JesusWalk family continues to spend time in scripture, prayer, and worship to seek God’s
-                vision for our ministry this year. You can find our latest updates here,
-                to learn more about our plans for the JesusWalk 2021 Youth Conference. </p>
-            <div class="centerflex">
-                <button class="btn submitBtn ">Learn More</button>
-            </div>
-        </div>
-
-    </section>
-    <section id="subscribe" class="width90 silver-background"></section> -->
 </main>
 <?php
 
