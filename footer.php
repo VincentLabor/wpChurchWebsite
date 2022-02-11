@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -8,34 +9,38 @@
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod('understrap_container_type');
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+<?php get_template_part('sidebar-templates/sidebar', 'footerfull'); ?>
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="<?php echo esc_attr($container); ?>">
 
-		<div class="row">
+		<div class="subscribe whiteText bot3n5EMPadding">
+			<h3>Subscribe</h3>
+			<p>Subscribe to our newsletter to receive news and updates</p>
+			<div class="emailSubscribe ">
+				<label>EMAIL</label>
+				<input type="text" name="" id="">
+			</div>
+			<input type="button" value="Submit" >
+		</div>
 
-			<div class="col-md-12">
+		<hr class="bot3n5EMPadding whiteHr"/>
 
-				<footer class="site-footer" id="colophon">
+		<div class="footerGrid">
 
-					<div class="site-info">
+		</div>
 
-						<?php understrap_site_info(); ?>
+		<div class="site-info">
 
-					</div><!-- .site-info -->
+			<?php understrap_site_info(); ?>
 
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
-
-		</div><!-- row end -->
+		</div><!-- .site-info -->
 
 	</div><!-- container end -->
 
@@ -48,4 +53,3 @@ $container = get_theme_mod( 'understrap_container_type' );
 </body>
 
 </html>
-

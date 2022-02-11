@@ -8,23 +8,27 @@ pageBanner(array(
 
 ?>
 
-<div class="container">
-  <?php
+<div class="backgroundForEvent ">
+  <div class="container">
+    <?php
 
-  while (have_posts()) {
-    the_post();
-    get_template_part('template-parts/content-event');
-  ?>
+    while (have_posts()) {
+      //This is the specific post. Without this, the events would duplicate limitlessly.
+      //This does not affect any css or layout at all but the get_template_part does. 
+      the_post();
+      get_template_part('template-parts/content-event');
+    ?>
 
-  <?php
-  }
-  echo paginate_links();
-  ?>
+    <?php
+    }
+    echo paginate_links();
+    ?>
 
-  <hr class="section-break">
+    <hr class="section-break">
 
-  <p>Looking for a recap of past events? <a class="textBlack" href="<?php echo site_url('/past-events') ?>">Check out our past events archive</a>.</p>
+    <p>Looking for a recap of past events? <a class="textBlack" href="<?php echo site_url('/past-events') ?>">Check out our past events archive</a>.</p>
 
+  </div>
 </div>
 
 <?php get_footer();
