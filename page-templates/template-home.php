@@ -18,6 +18,7 @@ get_header();
 <header>
     <div class="home-banner">
         <div id="navMenu" class="hidden mobileMenuNav textWhite centerflex">
+
             <!-- This menu only appears on mobile and does not appear in desktop view. -->
             <?php
 				if (is_user_logged_in(
@@ -34,7 +35,6 @@ get_header();
 						)
 					)
 				));
-
 				?>
 
         </div>
