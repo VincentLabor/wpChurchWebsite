@@ -19,7 +19,7 @@ $sm: 576px;
 	padding: 0;
 	box-sizing: border-box;
 	line-height: 1.5;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 nav .container .navbar-collapse {
@@ -97,6 +97,18 @@ body {
 	line-height: 1.25;
 }
 
+.copyRightSize {
+	font-size: 16px;
+}
+
+div p .copyRightSize {
+	font-size: 16px;
+}
+
+.footerFontSize {
+	font-size: 8px;
+}
+
 .flex {
 	display: flex;
 }
@@ -137,13 +149,17 @@ body {
 	width: 90%;
 }
 
+.width40 {
+	width: 40%;
+}
+
 .fillWidth {
 	width: 100%;
 }
 
 /* Padding */
 
-.hrPadding{
+.hrPadding {
 	padding: 1em 0 1em 0;
 }
 
@@ -459,7 +475,7 @@ svg path {
 	height: 5em;
 	width: 7em;
 	margin: 0 1em 0 1em;
-font-family: monserrat;
+	font-family: monserrat;
 }
 
 .silver-background {
@@ -561,19 +577,18 @@ font-family: monserrat;
 	width: 100vw;
 }
 
-.wrapper{
+.wrapper {
 	padding-top: 3.5em;
 	margin-top: -1em;
-	background-color: #1C1C1C;
-	padding-bottom: 3.5;
-	text-align: center;
-	padding-bottom: 3.5em ;
-}
-
-.site-info{
+	background-color: #1c1c1c;
+	padding-bottom: 2em;
 	text-align: center;
 }
 
-.whiteHr{
+.site-info {
+	text-align: center;
+}
+
+.whiteHr {
 	border-top: white 1px solid;
 }

@@ -31,10 +31,9 @@ $container = get_theme_mod('understrap_container_type');
 <body <?php understrap_body_attributes(); ?> class="">
 	<?php do_action('wp_body_open'); ?>
 	<div class="site menuCenter" id="page">
-
 		<!-- ******************* The Navbar Area ******************* -->
 		<div id="wrapper-navbar menuCenter">
-			<a href="/" class=" whiteText"> jesuswalkyouth </a>
+			<a href="/" class=" whiteText"> JesuswalkYouth </a>
 		</div>
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
