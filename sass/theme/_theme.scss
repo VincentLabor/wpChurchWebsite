@@ -39,8 +39,11 @@ body {
 }
 
 .fa-bars {
-	//Test because gulp[ is not working
-	color: red;
+	color: white;
+}
+
+.bolden600{
+	font-weight: 600;
 }
 
 .blueText {
@@ -57,6 +60,10 @@ body {
 
 .removeScrollbar {
 	overflow: hidden;
+}
+
+.goldText{
+	color: #FECF00 !important;
 }
 
 .whiteText {
@@ -88,12 +95,13 @@ div .fillWidth a .reduceSpacingMar {
 	background-color: $backgroundColorCyan;
 	margin-top: -3em;
 	padding-top: 3.5em;
+	padding-bottom: 3.5em;
 }
 
 body {
 	// font-family: "Source Sans Pro", sans-serif;
 	font-family: "Noto Sans", sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 1.25;
 }
 
@@ -210,6 +218,10 @@ body {
 
 .bot3emMargin {
 	margin-bottom: 3em;
+}
+
+.padTopBot1n5em{
+	padding: 1.5em 0 1.5em 0;
 }
 
 .absolute {
@@ -441,35 +453,54 @@ svg path {
 	width: 20%;
 }
 
-// .eventItem:hover {
-// 	background-color: #f9f9fb;
-// 	height: 50%;
-// 	position: relative;
-// }
-// .eventItem:hover:before {
-// 	content: "";
+.eventItem{
+	border-top: .5px solid black;
+}
+// .eventItem:after{
+// 	content: '';
 // 	position: absolute;
-// 	top: 0;
-// 	right: 0;
-// 	border-top: 30px solid white;
-// 	border-left: 30px solid white;
-// 	width: 0;
+// 	width: 100%;
+// 	transform: scaleX(0);
+// 	height: 2px;
+// 	bottom: 0;
+// 	left: 0;
+// 	background-color: #0087ca;
+// 	transform-origin: bottom right;
+// 	transition: transform 0.25s ease-out;
+// }
+// .eventItem:hover:after{
+// 	transform: scaleX(1);
+// 	transform-origin: bottom left;
 // }
 
-// .eventItem2:hover {
-// 	background-color: #f9f9fb;
-// 	height: 50%;
-// 	position: relative;
-// }
-// .eventItem2:hover:before {
-// 	content: "";
-// 	position: absolute;
-// 	bottom: 0;
-// 	right: 0;
-// 	border-bottom: 30px solid white;
-// 	border-left: 30px solid #f9f9fb;
-// 	width: 0;
-// }
+//  .eventItem:hover {
+//  	background-color: #f9f9fb;
+//  	height: 50%;
+//  	position: relative;
+//  }
+//  .eventItem:hover:before {
+//  	content: "";
+//  	position: absolute;
+//  	top: 0;
+//  	right: 0;
+//  	border-top: 30px solid white;
+//  	border-left: 30px solid white;
+//  	width: 0;
+//  }
+//  .eventItem2:hover {
+//  	background-color: #f9f9fb;
+//  	height: 50%;
+//  	position: relative;
+//  }
+//  .eventItem2:hover:before {
+//  	content: "";
+//  	position: absolute;
+//  	bottom: 0;
+//  	right: 0;
+//  	border-bottom: 30px solid white;
+//  	border-left: 30px solid #f9f9fb;
+//  	width: 0;
+//  }
 
 .thumbnailSize {
 	height: 5em;
@@ -527,7 +558,7 @@ svg path {
 	//Event styles
 	.eventTitle {
 		font-size: 1em;
-		// margin-bottom: -.3em; Try making it more specific?
+		font-weight: 800;
 	}
 
 	.reduceSpacingMar {
