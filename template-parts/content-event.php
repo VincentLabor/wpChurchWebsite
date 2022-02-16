@@ -80,4 +80,3 @@
   </div>
 </div>
 <!-- End of the mobile block -->
-<hr />
