@@ -45,6 +45,9 @@ body {
 .bolden600{
 	font-weight: 600;
 }
+.bolden800{
+	font-weight: 800;
+}
 
 .blueText {
 	color: royalblue !important;
@@ -503,8 +506,8 @@ svg path {
 //  }
 
 .thumbnailSize {
-	height: 5em;
-	width: 7em;
+	height: 7em;
+	width: 10em;
 	margin: 0 1em 0 1em;
 	font-family: monserrat;
 }
@@ -544,9 +547,6 @@ svg path {
 // $sm: 576px;
 
 @media screen and (max-width: $md) {
-}
-
-@media screen and (max-width: $md) {
 	.hideNavMenu {
 		display: none;
 	}
@@ -557,8 +557,7 @@ svg path {
 
 	//Event styles
 	.eventTitle {
-		font-size: 1em;
-		font-weight: 800;
+		font-size: 20px;
 	}
 
 	.reduceSpacingMar {
