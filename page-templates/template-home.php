@@ -17,27 +17,7 @@ get_header();
 
 <header>
     <div class="home-banner">
-        <div id="navMenu" class="hidden mobileMenuNav textWhite centerflex">
 
-            <!-- This menu only appears on mobile and does not appear in desktop view. -->
-            <?php
-				if (is_user_logged_in(
-					wp_nav_menu(
-						array(
-							'theme_location'  => 'primary',
-							'container_class' => 'collapse navbar-collapse flexspace ',
-							'container_id'    => 'navbarNavDropdown',
-							'menu_class'      => 'navbar-nav hideMobileMenu',
-							'fallback_cb'     => '',
-							'menu_id'         => 'main-menu', //this is just semantic and there is no actual class. 
-							'depth'           => 3,
-							'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-						)
-					)
-				));
-				?>
-
-        </div>
 
         <div class="centeredHeading width90 blk bgimage">
 

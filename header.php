@@ -48,6 +48,7 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="container whiteText letterSpace ">
 				<!-- I will be turning off default data-toggle. -->
 
+				<!-- this is the navbtn -->
 				<button class="navbar-toggler navMenu flexspace" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="">
 					<i id="navIcon" class="fa fa-bars"></i>
 				</button>
@@ -69,7 +70,6 @@ $container = get_theme_mod('understrap_container_type');
 						)
 					)
 				));
-
 				?>
 
 				<!-- This section determines if the login/register buttons appear or not.  -->
@@ -85,6 +85,29 @@ $container = get_theme_mod('understrap_container_type');
 			</div><!-- .container -->
 		<?php endif; ?>
 
+		<!-- I will superpposition the nav menu here. -->
+
+
 		</nav><!-- .site-navigation -->
+		<div id="navMenu" class="hidden mobileMenuNav textWhite centerflex">
+
+			<!-- This menu only appears on mobile and does not appear in desktop view. -->
+			<?php
+			if (is_user_logged_in(
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'primary',
+						'container_class' => 'collapse navbar-collapse flexspace ',
+						'container_id'    => 'navbarNavDropdown',
+						'menu_class'      => 'navbar-nav hideMobileMenu',
+						'fallback_cb'     => '',
+						'menu_id'         => 'main-menu', //this is just semantic and there is no actual class. 
+						'depth'           => 3,
+						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				)
+			));
+			?>
+		</div>
 
 	</div><!-- #wrapper-navbar end -->
