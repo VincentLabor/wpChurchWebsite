@@ -12,10 +12,12 @@ navMenuBtn.onclick = () => {
 		openNavMenu = !openNavMenu;
 		document.getElementById("navMenu").classList.remove("hidden");
 		document.body.classList.add("removeScrollbar");
+		console.log("Clicked")
 	} else {
 		openNavMenu = !openNavMenu;
 		document.getElementById("navMenu").classList.add("hidden");
 		document.body.classList.remove("removeScrollbar");
 		//Lol change idiot.
+		console.log("clicked on")
 	}
 };

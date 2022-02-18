@@ -42,10 +42,10 @@ body {
 	color: white;
 }
 
-.bolden600{
+.bolden600 {
 	font-weight: 600;
 }
-.bolden800{
+.bolden800 {
 	font-weight: 800;
 }
 
@@ -65,8 +65,8 @@ body {
 	overflow: hidden;
 }
 
-.goldText{
-	color: #FECF00 !important;
+.goldText {
+	color: #fecf00 !important;
 }
 
 .whiteText {
@@ -223,7 +223,7 @@ body {
 	margin-bottom: 3em;
 }
 
-.padTopBot1n5em{
+.padTopBot1n5em {
 	padding: 1.5em 0 1.5em 0;
 }
 
@@ -456,8 +456,8 @@ svg path {
 	width: 20%;
 }
 
-.eventItem{
-	border-top: .5px solid black;
+.eventItem {
+	border-top: 0.5px solid black;
 }
 // .eventItem:after{
 // 	content: '';
@@ -605,6 +605,8 @@ svg path {
 	position: absolute;
 	z-index: 20000000;
 	width: 100vw;
+	 left: 0;
+	top: 0;
 }
 
 .wrapper {
@@ -622,3 +624,8 @@ svg path {
 .whiteHr {
 	border-top: white 1px solid;
 }
+
+// .moveNavMenu{
+// 	position: absolute;
+// 	left: -20em;
+// }
