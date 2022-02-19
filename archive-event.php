@@ -7,8 +7,9 @@ pageBanner(array(
 ));
 
 ?>
+<div class="backgroundBG">
 
-<div class="backgroundForEvent ">
+<div class="backgroundForEvent roundEdges">
   <div class="container">
     <?php
 
@@ -31,6 +32,7 @@ pageBanner(array(
     <!-- This br removes the whitespace that appears on the events page. -->
     <br /> 
   </div>
+</div>
 </div>
 
 <?php get_footer();

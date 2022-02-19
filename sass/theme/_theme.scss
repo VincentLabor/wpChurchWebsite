@@ -101,6 +101,14 @@ div .fillWidth a .reduceSpacingMar {
 	padding-bottom: 3.5em;
 }
 
+.backgroundBG {
+	background: #1c1c1c;
+}
+
+.graybackground {
+	background-color: #1c1c1c;
+}
+
 body {
 	// font-family: "Source Sans Pro", sans-serif;
 	font-family: "Noto Sans", sans-serif;
@@ -129,6 +137,10 @@ div p .copyRightSize {
 	justify-content: center;
 	align-items: center;
 	height: inherit;
+}
+
+.roundEdges {
+	border-radius: 200px;
 }
 
 .menuItemPadding {
@@ -378,7 +390,6 @@ nav {
 }
 
 .page-banner__bg-image {
-	opacity: 0.33;
 	background-size: cover;
 	position: absolute;
 	top: 0;
@@ -459,51 +470,6 @@ svg path {
 .eventItem {
 	border-top: 0.5px solid black;
 }
-// .eventItem:after{
-// 	content: '';
-// 	position: absolute;
-// 	width: 100%;
-// 	transform: scaleX(0);
-// 	height: 2px;
-// 	bottom: 0;
-// 	left: 0;
-// 	background-color: #0087ca;
-// 	transform-origin: bottom right;
-// 	transition: transform 0.25s ease-out;
-// }
-// .eventItem:hover:after{
-// 	transform: scaleX(1);
-// 	transform-origin: bottom left;
-// }
-
-//  .eventItem:hover {
-//  	background-color: #f9f9fb;
-//  	height: 50%;
-//  	position: relative;
-//  }
-//  .eventItem:hover:before {
-//  	content: "";
-//  	position: absolute;
-//  	top: 0;
-//  	right: 0;
-//  	border-top: 30px solid white;
-//  	border-left: 30px solid white;
-//  	width: 0;
-//  }
-//  .eventItem2:hover {
-//  	background-color: #f9f9fb;
-//  	height: 50%;
-//  	position: relative;
-//  }
-//  .eventItem2:hover:before {
-//  	content: "";
-//  	position: absolute;
-//  	bottom: 0;
-//  	right: 0;
-//  	border-bottom: 30px solid white;
-//  	border-left: 30px solid #f9f9fb;
-//  	width: 0;
-//  }
 
 .thumbnailSize {
 	height: 7em;
@@ -605,13 +571,12 @@ svg path {
 	position: absolute;
 	z-index: 20000000;
 	width: 100vw;
-	 left: 0;
+	left: 0;
 	top: 0;
 }
 
 .wrapper {
 	padding-top: 3.5em;
-	margin-top: -1em;
 	background-color: #1c1c1c;
 	padding-bottom: 2em;
 	text-align: center;
@@ -625,7 +590,3 @@ svg path {
 	border-top: white 1px solid;
 }
 
-// .moveNavMenu{
-// 	position: absolute;
-// 	left: -20em;
-// }
