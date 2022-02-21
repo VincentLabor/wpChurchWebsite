@@ -85,6 +85,7 @@ div .fillWidth a .reduceSpacingMar {
 	background: inherit;
 	border: 1px black solid;
 }
+
 .whitesubmitBtn {
 	background: inherit;
 	border: 1px white solid;
@@ -126,6 +127,11 @@ div p .copyRightSize {
 
 .footerFontSize {
 	font-size: 8px;
+}
+
+.footerBtn {
+	padding: 0.3em 0.8em 0.3em 0.8em;
+	margin-top: 1em;
 }
 
 .flex {
@@ -512,6 +518,7 @@ svg path {
 // $md: 768px;
 // $sm: 576px;
 
+//This is for the mobile view
 @media screen and (max-width: $md) {
 	.hideNavMenu {
 		display: none;
@@ -538,7 +545,34 @@ svg path {
 		font-size: 1em;
 	}
 
+	p .width40 {
+		width: 100%;
+	}
+
+	#footerGrid .bot4EMPadding {
+		padding-bottom: 2em;
+	}
+
+	.mobile1emTopPad {
+		padding-top: 1em;
+	}
+
+	.copyRightSize {
+		font-size: 13px;
+	}
 	//probably need to move the flex to left.
+
+	#footerGrid .bot4EMPadding {
+		padding-bottom: 1em;
+	}
+
+	.copyWidth {
+		width: 100% !important;
+	}
+
+	.bot1em {
+		padding-bottom: 1em !important;
+	}
 }
 
 @media screen and (min-width: $lg) {
@@ -590,3 +624,25 @@ svg path {
 	border-top: white 1px solid;
 }
 
+/* Scrollbar styles*/
+/* width */
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: gray;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #d3d3d3;
+}

@@ -20,7 +20,7 @@ $container = get_theme_mod('understrap_container_type');
 
 	<div class="<?php echo esc_attr($container); ?>">
 
-		<div class="subscribe whiteText ">
+		<div class="subscribe whiteText bot1EMPadding">
 			<Strong>
 				<h3>Subscribe</h3>
 			</Strong>
@@ -29,21 +29,23 @@ $container = get_theme_mod('understrap_container_type');
 				<label>EMAIL</label>
 				<input type="text" name="" id="">
 			</div>
-			<input type="button" value="Submit">
+			<input type="button" value="Submit" class="footerBtn textBlack">
 		</div>
 
 		<hr class=" whiteHr bot1EMPadding" />
 
-		<div id="footerGrid" class="container bot4EMPadding">
+		<div id="footerGrid" class="container bot4EMPadding bot1em">
 			<div class="row">
 				<div class="col-sm centerflexColumn">
 
-					<img src="<?php echo get_template_directory_uri();
-								?> /img/JW_WHITESMALL.png" class="top1EMPadding" alt="">
+					<img srcset="<?php echo get_template_directory_uri();
+									?>/img/JW_WHITE-170w.png 170w,
+								<?php echo get_template_directory_uri();
+								?>/img/JW_WHITE-113w.png 113w," sizes="(max-width: 768px) 113px, 170px" class="top1EMPadding" alt="Jesuswalk Logo">
 
 				</div>
 				<div class="col-sm centerflexColumn">
-					<p class="whiteText ">
+					<p class="whiteText mobile1emTopPad">
 						P.O. Box 2404
 						<br />
 						Fullerton, CA 92837
@@ -53,11 +55,6 @@ $container = get_theme_mod('understrap_container_type');
 				</div>
 				<div class="col-sm whiteText centerflexColumn">
 					<div class="container whiteText letterSpace centerflexColumn">
-						<!-- I will be turning off default data-toggle. -->
-
-						<button class="navbar-toggler navMenu flexspace" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="">
-							<i id="navIcon" class="fa fa-bars"></i>
-						</button>
 
 						<!-- The WordPress Menu goes here -->
 						<!-- The menu fix I did was add different nav classes that would hide either menu if in mobile or desktop view. -->
@@ -98,7 +95,7 @@ $container = get_theme_mod('understrap_container_type');
 
 		<div class="site-info copyRightSize whiteText ">
 			<?php understrap_site_info(); ?>
-			<p class="whiteText copyRightSize width40">
+			<p class="whiteText copyRightSize width40 copyWidth">
 				Copyright © 2020 JesusWalk Youth Conference Organization, All rights reserved.
 			</p>
 		</div><!-- .site-info -->
