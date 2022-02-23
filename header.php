@@ -49,7 +49,7 @@ $container = get_theme_mod('understrap_container_type');
 				<!-- I will be turning off default data-toggle. -->
 
 				<!-- this is the navbtn -->
-				<button class="navbar-toggler navMenu flexspace" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="">
+				<button class="navbar-toggler navMenu flexspace " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="">
 					<i id="navIcon" class="fa fa-bars"></i>
 				</button>
 
@@ -89,8 +89,9 @@ $container = get_theme_mod('understrap_container_type');
 
 
 		</nav><!-- .site-navigation -->
-		<div id="navMenu" class="hidden mobileMenuNav textWhite centerflex">
-
+		<div id="navMenu" class="hidden mobileMenuNav textWhite centerflex fontSz18">
+			<div class="centerflexColumn">
+						<a href="/"><p>Home</p></a>
 			<!-- This menu only appears on mobile and does not appear in desktop view. -->
 			<?php
 			if (is_user_logged_in(
@@ -108,6 +109,7 @@ $container = get_theme_mod('understrap_container_type');
 				)
 			));
 			?>
+			</div>
 		</div>
 
 	</div><!-- #wrapper-navbar end -->
