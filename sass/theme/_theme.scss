@@ -199,7 +199,21 @@ body {
 	width: 100%;
 }
 
+
+.socialIcons {
+	position: absolute;
+	top: 50%;
+}
+
+.fa-twitter, .fa-instagram, .fa-youtube-play, .fa-facebook-official{
+	color: white;
+}
+
 /* Padding */
+
+.halfPadding{
+	padding: .5em;
+}
 
 .hrPadding {
 	padding: 1em 0 1em 0;
@@ -666,10 +680,10 @@ svg path {
 
 .donateBtn {
 	background-color: white;
-    color: black;
-    padding: 0.1em 1em 0.1em 1em;
-    text-decoration: none;
-    border: 1px solid white;
-    font-weight: 600;
+	color: black;
+	padding: 0.1em 1em 0.1em 1em;
+	text-decoration: none;
+	border: 1px solid white;
+	font-weight: 600;
 	margin-left: 1.5em;
 }
