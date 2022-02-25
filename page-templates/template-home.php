@@ -18,6 +18,9 @@ get_header();
 <header>
     <div class="home-banner">
 
+        <!-- Delete this later, this was a test to see where the items would end up. -->
+        <!-- <p class="socialIcons">Hello</p> -->
+
 
         <div class="centeredHeading width90 blk bgimage">
 
@@ -28,7 +31,30 @@ get_header();
                         ?>/img/JW_WHITE.png" alt="" class="jwalkLogo bot3EMPadding">
             <h4 class="landingCaption textWhite">“Whoever claims to live in him must live as Jesus did.”</h4>
         </div>
+
+
+        <div class="socialIcons centerflexColumn halfPadding">
+
+
+            <a href="/">
+                <img src="<?php echo get_template_directory_uri();
+                            ?>/img/icon/ytIcon24w.png" alt="" class="halfPadding ">
+            </a>
+            <a href="/">
+                <img src="<?php echo get_template_directory_uri();
+                            ?>/img/icon/fbIcon24w.png" alt="" class="halfPadding ">
+            </a>
+            <a href="/">
+                <img src="<?php echo get_template_directory_uri();
+                            ?>/img/icon/instaIcon24w.png" alt="" class="halfPadding ">
+            </a>
+        </div>
+
     </div>
+
+
+
+
 </header>
 <main class="">
 
