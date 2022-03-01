@@ -21,30 +21,29 @@ get_header();
         <!-- Delete this later, this was a test to see where the items would end up. -->
         <!-- <p class="socialIcons">Hello</p> -->
 
-
-        <div class="centeredHeading width90 blk bgimage">
+        <div class="centeredHeading width90 bgimage">
 
             <div class="absolute">
-                <image class="" src="<?php echo get_theme_file_uri('/img/bannerImage.png'); ?>"></image>
+                <image class="dropmeDown" src="<?php echo get_theme_file_uri('/img/JW2022_Website_1920w.png'); ?>"></image>
             </div>
-            <img src="<?php echo get_template_directory_uri();
+            <!-- <img src="<?php //echo get_template_directory_uri();
                         ?>/img/JW_WHITE.png" alt="" class="jwalkLogo bot3EMPadding">
-            <h4 class="landingCaption textWhite">“Whoever claims to live in him must live as Jesus did.”</h4>
+            <h4 class="landingCaption textWhite">“Whoever claims to live in him must live as Jesus did.”</h4> -->
         </div>
 
 
         <div class="socialIcons centerflexColumn halfPadding">
 
 
-            <a href="/">
+            <a href="https://www.youtube.com/user/jesuswalkyouth">
                 <img src="<?php echo get_template_directory_uri();
                             ?>/img/icon/ytIcon24w.png" alt="" class="halfPadding ">
             </a>
-            <a href="/">
+            <a href="https://www.facebook.com/jesuswalkyouth/">
                 <img src="<?php echo get_template_directory_uri();
                             ?>/img/icon/fbIcon24w.png" alt="" class="halfPadding ">
             </a>
-            <a href="/">
+            <a href="https://www.instagram.com/jesuswalkyouth/?hl=en">
                 <img src="<?php echo get_template_directory_uri();
                             ?>/img/icon/instaIcon24w.png" alt="" class="halfPadding ">
             </a>

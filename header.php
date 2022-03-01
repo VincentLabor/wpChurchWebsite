@@ -24,7 +24,6 @@ $container = get_theme_mod('understrap_container_type');
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;0,900;1,300&display=swap" rel="stylesheet"> -->
 	<?php wp_head(); ?>
 </head>
 
@@ -33,7 +32,8 @@ $container = get_theme_mod('understrap_container_type');
 	<div class="site menuCenter" id="page">
 		<!-- ******************* The Navbar Area ******************* -->
 		<div id="wrapper-navbar menuCenter">
-			<a href="/" class=" whiteText"> JesuswalkYouth </a>
+		<!-- JW_Logo_SideText.png -->
+			<a href="/" class=" whiteText"><img src="<?php echo get_template_directory_uri();?>/img/icon/JW_Logohalf.png"></a>
 
 			<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/JW_WHITE-113w.png" alt="Jesuswalk Logo"> -->
 
@@ -46,7 +46,7 @@ $container = get_theme_mod('understrap_container_type');
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
 
-		<nav id="main-nav" class="navbar navbar-expand-lg background blk whiteText" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar navbar-expand-lg background jwalk_Gray whiteText" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e('Main Navigation', 'understrap'); ?>
