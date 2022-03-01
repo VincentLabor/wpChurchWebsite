@@ -1,5 +1,5 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
-$primary: black;
+$primary: #1C1C1C;
 $secondary: white; //#83c5be
 $background: #c5e4e1;
 $backgroundColorCyan: #689eb8;
@@ -36,6 +36,10 @@ body {
 
 .blk {
 	background-color: black;
+}
+
+.jwalk_Gray{
+	background-color: $primary;
 }
 
 .fa-bars {
@@ -212,7 +216,7 @@ body {
 /* Padding */
 
 .halfPadding{
-	padding: .5em;
+	padding: 0 0 1em 5em;
 }
 
 .hrPadding {
@@ -274,9 +278,10 @@ body {
 
 .absolute {
 	position: absolute;
-	width: inherit;
+	// width: inherit;
 	height: inherit;
-	opacity: 0.2;
+	//There is a margin here because we want to push landing below the sticky header.
+	margin-top: 12em;
 }
 
 .hidden {
@@ -292,9 +297,13 @@ body {
 }
 
 .home-banner {
-	height: 100vh;
-	background: black;
+	height: 80vh;
+	background: #1C1C1C;
 	background-size: cover;
+}
+
+.dropmeDown{
+	margin-top: 6em;
 }
 
 .bannerImg {
@@ -341,11 +350,15 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: black;
+	background: #1C1C1C;
+	position: fixed;
+    box-sizing: border-box;
+    z-index: 99999999;
+    width: 100%;
 }
 
 #main-nav {
-	border-top: 1px solid black;
+	border-top: 1px solid #1C1C1C;
 	// @media(min-width:$lg){
 	// 	display: none;
 	// }
@@ -473,7 +486,7 @@ nav {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	height: 100vh;
+	height: 100%;
 }
 
 .centeredItem {
