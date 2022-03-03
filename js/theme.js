@@ -7079,11 +7079,13 @@ navMenuBtn.onclick = () => {
   if (openNavMenu === false) {
     openNavMenu = !openNavMenu;
     document.getElementById("navMenu").classList.remove("hidden");
+    document.getElementById("footerNav").classList.add("hidden");
     document.body.classList.add("removeScrollbar");
     console.log("Clicked");
   } else {
     openNavMenu = !openNavMenu;
     document.getElementById("navMenu").classList.add("hidden");
+    document.getElementById("footerNav").classList.remove("hidden");
     document.body.classList.remove("removeScrollbar"); //Lol change idiot.
 
     console.log("clicked on");

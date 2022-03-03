@@ -52,6 +52,22 @@ $container = get_theme_mod('understrap_container_type');
 						<br />
 						657-234-JWYC(5992)
 					</p>
+
+					<!-- <div class="socialIcons centerflex halfPadding"> -->
+					<div class=" centerflex ">
+						<a href="https://www.youtube.com/user/jesuswalkyouth">
+							<img src="<?php echo get_template_directory_uri();
+										?>/img/icon/ytIcon24w.png" alt="" class="footer_icon_padding ">
+						</a>
+						<a href="https://www.facebook.com/jesuswalkyouth/">
+							<img src="<?php echo get_template_directory_uri();
+										?>/img/icon/fbIcon24w.png" alt="" class="footer_icon_padding ">
+						</a>
+						<a href="https://www.instagram.com/jesuswalkyouth/?hl=en">
+							<img src="<?php echo get_template_directory_uri();
+										?>/img/icon/instaIcon24w.png" alt="" class="footer_icon_padding ">
+						</a>
+					</div>
 				</div>
 				<div class="col-sm whiteText centerflexColumn">
 					<div class="container whiteText letterSpace centerflexColumn">
@@ -64,7 +80,8 @@ $container = get_theme_mod('understrap_container_type');
 								array(
 									'theme_location'  => 'primary',
 									'container_class' => '',
-									'container_id'    => 'navbarNavDropdown',
+									'container_id'    => 'footerNav',
+									// 'container_id'    => 'navbarNavDropdown',
 									'menu_class'      => 'navbar-nav',
 									'fallback_cb'     => '',
 									'menu_id'         => 'main-menu', //this is just semantic and there is no actual class. 
@@ -75,7 +92,7 @@ $container = get_theme_mod('understrap_container_type');
 						));
 
 						?>
-
+ 
 						<!-- This section determines if the login/register buttons appear or not.  -->
 						<?php if ('container' === $container) : ?>
 							<?php if (!is_user_logged_in()) { ?>
@@ -88,6 +105,7 @@ $container = get_theme_mod('understrap_container_type');
 							<?php }; ?>
 					</div><!-- .container -->
 				<?php endif; ?>
+					
 				</div>
 
 			</div>

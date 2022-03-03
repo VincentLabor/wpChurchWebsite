@@ -138,33 +138,8 @@ function ourHeaderUrl()
 
 
 //This affects the styling of the login page.
-add_action("login_enqueue_scripts", "ourLoginCSS");
-function ourLoginCSS()
-{
-?>
 
-  <style type="text/css">
-    /* Fix me */
-    body.login div#login h1 a {
-      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/JW_WHITE.png);
-      margin-bottom: 3em;
-    }
-
-    body.login div#login p#nav a {
-      color: white;
-    }
-
-    body.login div#login p#backtoblog a {
-      color: white;
-    }
-
-    body.login {
-      background: black;
-    }
-  </style>
-
-<?php
-}
+//This seems to not work for whatever reason.
 
 //Adding text to login page is borked
 // add_filter('login_headertext','ourLoginTitle');
