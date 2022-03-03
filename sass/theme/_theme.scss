@@ -215,6 +215,14 @@ body {
 
 /* Padding */
 
+.footer_icon_padding{
+	padding: 0 .5em .5em .5em;
+}
+
+.mobile_footer_icon_padding{
+	padding: 1em .5em .5em .5em;
+}
+
 .halfPadding{
 	padding: 0 0 1em 5em;
 }
@@ -561,6 +569,12 @@ svg path {
 
 //This is for the mobile view
 @media screen and (max-width: $md) {
+	.home-banner {
+		height: 50vh;
+		background: #1C1C1C;
+		background-size: cover;
+	}
+
 	.hideNavMenu {
 		display: none;
 	}
@@ -699,4 +713,13 @@ svg path {
 	border: 1px solid white;
 	font-weight: 600;
 	margin-left: 1.5em;
+}
+.mobileDonateBtn {
+	background-color: white;
+	color: black;
+	padding: 0.1em 1em 0.1em 1em;
+	text-decoration: none;
+	border: 1px solid white;
+	font-weight: 600;
+
 }

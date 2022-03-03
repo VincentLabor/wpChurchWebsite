@@ -32,8 +32,8 @@ $container = get_theme_mod('understrap_container_type');
 	<div class="site menuCenter" id="page">
 		<!-- ******************* The Navbar Area ******************* -->
 		<div id="wrapper-navbar menuCenter">
-		<!-- JW_Logo_SideText.png -->
-			<a href="/" class=" whiteText"><img src="<?php echo get_template_directory_uri();?>/img/icon/JW_Logohalf.png"></a>
+			<!-- JW_Logo_SideText.png -->
+			<a href="/" class=" whiteText"><img src="<?php echo get_template_directory_uri(); ?>/img/icon/JW_Logohalf.png" alt="Jesuswalk Logo"></a>
 
 			<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/JW_WHITE-113w.png" alt="Jesuswalk Logo"> -->
 
@@ -84,7 +84,7 @@ $container = get_theme_mod('understrap_container_type');
 				));
 				?>
 
-				<a href="https://givebutter.com/jesuswalk-donate"><input type="button" value="Donate" class="donateBtn"></a>
+				<a href="https://givebutter.com/jesuswalk-donate"><input type="button" value="Donate" class="donateBtn hideForMobile"></a>
 
 				<!-- This section determines if the login/register buttons appear or not.  -->
 				<?php if ('container' === $container) : ?>
@@ -100,6 +100,7 @@ $container = get_theme_mod('understrap_container_type');
 		<?php endif; ?>
 
 		<!-- I will superpposition the nav menu here. -->
+
 
 
 		</nav><!-- .site-navigation -->
@@ -125,6 +126,26 @@ $container = get_theme_mod('understrap_container_type');
 					)
 				));
 				?>
+
+				<div class="  ">
+					<a href="https://www.youtube.com/user/jesuswalkyouth">
+						<img src="<?php echo get_template_directory_uri();
+									?>/img/icon/ytIcon24w.png" alt="" class="footer_icon_padding ">
+					</a>
+					<a href="https://www.facebook.com/jesuswalkyouth/">
+						<img src="<?php echo get_template_directory_uri();
+									?>/img/icon/fbIcon24w.png" alt="" class="footer_icon_padding ">
+					</a>
+					<a href="https://www.instagram.com/jesuswalkyouth/?hl=en">
+						<img src="<?php echo get_template_directory_uri();
+									?>/img/icon/instaIcon24w.png" alt="" class="footer_icon_padding ">
+					</a>
+				</div>
+				<div class="btn centerflexColumn ">
+					<a href="https://givebutter.com/jesuswalk-donate" class="top1EMPadding "><input type="button" value="Donate" class="mobileDonateBtn "></a>
+				</div>
+
+
 			</div>
 		</div>
 

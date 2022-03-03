@@ -32,9 +32,7 @@ get_header();
         </div>
 
 
-        <div class="socialIcons centerflexColumn halfPadding">
-
-
+        <div class="socialIcons centerflexColumn halfPadding hideForMobile">
             <a href="https://www.youtube.com/user/jesuswalkyouth">
                 <img src="<?php echo get_template_directory_uri();
                             ?>/img/icon/ytIcon24w.png" alt="" class="halfPadding ">
@@ -48,7 +46,6 @@ get_header();
                             ?>/img/icon/instaIcon24w.png" alt="" class="halfPadding ">
             </a>
         </div>
-
     </div>
 
 
