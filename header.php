@@ -55,8 +55,8 @@ $container = get_theme_mod('understrap_container_type');
 
 			<div class="container whiteText letterSpace ">
 
-				<a href="/">
-					<i class="fa fa-home fa-lg" aria-hidden="true"></i>
+				<a href="/"class="hideForMobile">
+					<i class="fa fa-home fa-lg " aria-hidden="true"></i>
 				</a>
 
 				<!-- I will be turning off default data-toggle. -->
