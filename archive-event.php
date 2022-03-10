@@ -9,7 +9,7 @@ pageBanner(array(
 ?>
 <div class="backgroundBG">
 
-<div class="backgroundForEvent roundEdges">
+<div class="backgroundForEvent">
   <div class="container">
     <?php
 

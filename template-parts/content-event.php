@@ -1,6 +1,6 @@
 <!-- This is to display page banner for single pages -->
 <!-- This will show to desktop users, will be hidden on mobile. -->
-<div class="centerflex padTopBot1n5em eventItem colForMobile hideForMobile ">
+<div class="centerflex padTopBot1n5em colForMobile hideForMobile ">
 
   <div class="centeredItem">
     <a id="eventDates" class="" href="<?php the_permalink(); ?>">
@@ -19,7 +19,7 @@
     <div class="fillWidth whiteText">
 
       <!-- Title of the post -->
-      <h3 class=" eventTitle textBlack reduceSpacingMar"><a class=" goldText bolden800 reduceSpacingMar" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+      <h3 class=" eventTitle textBlack reduceSpacingMar"><a class="textBlack bolden800 reduceSpacingMar" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
       <!-- Date of the Event -->
 
@@ -43,9 +43,9 @@
 </div>
 
 <!-- This will display for mobile users. Will hide once on desktop. -->
-<div class="centerflex leftAlignMobile padTopBot1n5em eventItem eventItem2 colForMobile hideOnDesktop">
+<div class="centerflex leftAlignMobile padTopBot1n5em eventItem2 colForMobile hideOnDesktop">
 
-  <h3 class="eventTitle"><a class="goldText bolden800 " href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+  <h3 class="eventTitle"><a class="textBlack bolden800 " href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
   <?php
   if (get_field('page_banner_background_image')) {
@@ -68,7 +68,6 @@
       <span class=" "><?php echo $eventDate->format('d') ?></span>
     </p>
   </div>
-
 
   <!-- <div class="centeredItem"></div> -->
   <div class="eventInfo fillWidth centeredItem">
