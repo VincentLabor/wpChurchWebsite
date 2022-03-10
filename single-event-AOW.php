@@ -29,10 +29,7 @@ get_header();
 
 
 <?php
-the_content();
+// the_content();
 get_footer();
-
-?>
-
 
 ?>
