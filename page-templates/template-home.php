@@ -17,18 +17,16 @@ get_header();
 
 <header>
     <div class="home-banner">
+        <div class="centeredHeading bgimage">
 
-        <!-- Delete this later, this was a test to see where the items would end up. -->
-        <!-- <p class="socialIcons">Hello</p> -->
-
-        <div class="centeredHeading width90 bgimage">
-
-            <div class="absolute">
-                <image class="dropmeDown" src="<?php echo get_theme_file_uri('/img/JW2022_Website_1920w.png'); ?>"></image>
+            <div class="">
+                <img srcset="<?php echo get_template_directory_uri();
+                                ?>/img/JW2022_Website_1920w.png,
+								<?php echo get_template_directory_uri();
+                                ?>/img/JW2022_Website_770w.png, 
+								<?php echo get_template_directory_uri();
+                                ?>/img/JW2022_Website_580w.png," sizes="(max-width: 768px) 770px, (max-width: 576px) 580px, 1920px" class="" alt="Jesuswalk Landing Image">
             </div>
-            <!-- <img src="<?php //echo get_template_directory_uri();
-                        ?>/img/JW_WHITE.png" alt="" class="jwalkLogo bot3EMPadding">
-            <h4 class="landingCaption textWhite">“Whoever claims to live in him must live as Jesus did.”</h4> -->
         </div>
 
 
