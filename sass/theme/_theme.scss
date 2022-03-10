@@ -305,9 +305,10 @@ body {
 }
 
 .home-banner {
-	height: 80vh;
+	// height: 80vh;
 	background: #1C1C1C;
 	background-size: cover;
+	padding-top: 6em;
 }
 
 .dropmeDown{
@@ -570,7 +571,7 @@ svg path {
 //This is for the mobile view
 @media screen and (max-width: $md) {
 	.home-banner {
-		height: 50vh;
+		// height: 50vh;
 		background: #1C1C1C;
 		background-size: cover;
 	}
@@ -581,6 +582,10 @@ svg path {
 
 	.hideForMobile {
 		display: none;
+	}
+
+	.dropmeDown{
+		margin-top: 13em;
 	}
 
 	//Event styles

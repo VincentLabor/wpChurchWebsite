@@ -1,10 +1,16 @@
 <?php
 
+/*
+Template Name: FullWidthConference
+Template Post Type: conference, 
+*/
+
 get_header();
 
 while (have_posts()) {
   the_post();
   pageBanner();
+  
 ?>
   <div class="container">
     <div class="">
