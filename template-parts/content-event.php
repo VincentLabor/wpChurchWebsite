@@ -26,10 +26,10 @@
       <span id="dates" class=" whiteText dateFont-size reduceSpacingMar">
         <?php
         $eventDate = new DateTime(get_field('event_date'));
-        echo $eventDate->format('M')
+        echo $eventDate->format('F')
         ?>
       </span>
-      <span class=" "><?php echo $eventDate->format('d') ?></span>
+      <span class=" "><?php echo $eventDate->format('jS') ?></span>
 
 
       <!-- See more -->
@@ -59,13 +59,13 @@
 
   <div class="whiteText">
     <p>
-      <span class="dates  eventDates dateFont-size">
+      <span class="dates eventDates dateFont-size">
         <?php
         $eventDate = new DateTime(get_field('event_date'));
-        echo $eventDate->format('M')
+        echo $eventDate->format('F')
         ?>
       </span>
-      <span class=" "><?php echo $eventDate->format('d') ?></span>
+      <span class=" "><?php echo $eventDate->format('jS') ?></span>
     </p>
   </div>
 
