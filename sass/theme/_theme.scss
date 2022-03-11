@@ -106,6 +106,19 @@ div .fillWidth a .reduceSpacingMar {
 	padding-bottom: 3.5em;
 }
 
+//This sets up the padding and margins for AOW
+.aowBg{
+	background-color: #689eb8;
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
+	padding-left: 20em;
+    padding-right: 20em;
+}
+
+.aowText{
+	padding-left: 5em;
+}
+
 .backgroundBG {
 	background: #1c1c1c;
 }
@@ -636,6 +649,29 @@ svg path {
 	#navMenu {
 		z-index: 20000000;
 	}
+
+.aowBg{
+	background-color: #689eb8;
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
+	padding-left: 0;
+    padding-right: 0;
+}
+
+.aowText{
+	padding-top: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.centerflexColumnMobileAOW {
+	display: flex;
+	justify-content: center;
+	flex-direction: column !important; 
+	align-items: center;
+	height: inherit;
+}
+
 }
 
 @media screen and (min-width: $lg) {
