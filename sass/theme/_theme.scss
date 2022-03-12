@@ -22,6 +22,10 @@ $sm: 576px;
 	font-family: "Montserrat", sans-serif;
 }
 
+.cursive_font{
+	font-family: "Montserrat", sans-serif;
+}
+
 nav .container .navbar-collapse {
 	color: white;
 }
@@ -313,12 +317,8 @@ body {
 	z-index: 20;
 }
 
-.bgimage {
-	background-image: url("../../img/randomImage.jpg");
-}
-
 .home-banner {
-	// height: 80vh;
+	 height: 90vh;
 	background: #1C1C1C;
 	background-size: cover;
 	padding-top: 6em;
@@ -490,6 +490,7 @@ nav {
 	width: 15em;
 }
 
+
 .page-banner {
 	background-color: #000;
 	padding: 5em 0 4em 0;
@@ -574,6 +575,11 @@ svg path {
 	}
 }
 
+
+.centeredOnImg{
+	background-image: url("../../img/JW2022_Website_1920w.png");
+}
+
 //Media Queries for page responsiveness
 
 // $xl: 1440px;
@@ -583,8 +589,19 @@ svg path {
 
 //This is for the mobile view
 @media screen and (max-width: $md) {
+
+	.bgimage {
+		background-image: url(../img/mobilelanding.png);
+	}
+
+.vh100{
+	height: 100vh;
+}
+
+
+
 	.home-banner {
-		// height: 50vh;
+		height: 60vh;
 		background: #1C1C1C;
 		background-size: cover;
 	}
@@ -674,6 +691,13 @@ svg path {
 
 }
 
+@media screen and (min-width: $md) {
+
+	.bgimage {
+		background-image: url(../img/JW2022_Website_802w_720h.png);
+	}
+}
+
 @media screen and (min-width: $lg) {
 	.hideMobileMenu {
 		display: none;
@@ -682,9 +706,15 @@ svg path {
 	.hideOnDesktop {
 		display: none;
 	}
+
+	.bgimage {
+		background-image: url(../img/JW2022_Website_1920w.png);
+		height: 100vh;
+	}
 }
 
 @media screen and (min-width: $xl) {
+	
 	.width100 {
 		width: 100%;
 	}
