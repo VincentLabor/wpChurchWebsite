@@ -591,7 +591,10 @@ svg path {
 @media screen and (max-width: $md) {
 
 	.bgimage {
-		background-image: url(../img/mobilelanding.png);
+		background-image: url(../img/JW2022_Website_help.png);
+		background-repeat:no-repeat;
+		// background-attachment: fixed;
+		background-position: center; 
 	}
 
 .vh100{
@@ -695,6 +698,9 @@ svg path {
 
 	.bgimage {
 		background-image: url(../img/JW2022_Website_802w_720h.png);
+		background-repeat:no-repeat;
+		background-attachment: fixed;
+		background-position: center; 
 	}
 }
 
@@ -710,6 +716,9 @@ svg path {
 	.bgimage {
 		background-image: url(../img/JW2022_Website_1920w.png);
 		height: 100vh;
+		background-repeat:no-repeat;
+		background-attachment: fixed;
+		background-position: center; 
 	}
 }
 
