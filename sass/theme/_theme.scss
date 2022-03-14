@@ -1,5 +1,5 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
-$primary: #1C1C1C;
+$primary: #1c1c1c;
 $secondary: white; //#83c5be
 $background: #c5e4e1;
 $backgroundColorCyan: #689eb8;
@@ -22,7 +22,7 @@ $sm: 576px;
 	font-family: "Montserrat", sans-serif;
 }
 
-.cursive_font{
+.cursive_font {
 	font-family: "Montserrat", sans-serif;
 }
 
@@ -42,7 +42,7 @@ body {
 	background-color: black;
 }
 
-.jwalk_Gray{
+.jwalk_Gray {
 	background-color: $primary;
 }
 
@@ -111,15 +111,15 @@ div .fillWidth a .reduceSpacingMar {
 }
 
 //This sets up the padding and margins for AOW
-.aowBg{
+.aowBg {
 	background-color: #689eb8;
-    padding-top: 3.5em;
-    padding-bottom: 3.5em;
+	padding-top: 3.5em;
+	padding-bottom: 3.5em;
 	padding-left: 20em;
-    padding-right: 20em;
+	padding-right: 20em;
 }
 
-.aowText{
+.aowText {
 	padding-left: 5em;
 }
 
@@ -220,27 +220,29 @@ body {
 	width: 100%;
 }
 
-
 .socialIcons {
 	position: absolute;
 	top: 50%;
 }
 
-.fa-twitter, .fa-instagram, .fa-youtube-play, .fa-facebook-official{
+.fa-twitter,
+.fa-instagram,
+.fa-youtube-play,
+.fa-facebook-official {
 	color: white;
 }
 
 /* Padding */
 
-.footer_icon_padding{
-	padding: 0 .5em .5em .5em;
+.footer_icon_padding {
+	padding: 0 0.5em 0.5em 0.5em;
 }
 
-.mobile_footer_icon_padding{
-	padding: 1em .5em .5em .5em;
+.mobile_footer_icon_padding {
+	padding: 1em 0.5em 0.5em 0.5em;
 }
 
-.halfPadding{
+.halfPadding {
 	padding: 0 0 1em 5em;
 }
 
@@ -318,13 +320,13 @@ body {
 }
 
 .home-banner {
-	 height: 90vh;
-	background: #1C1C1C;
+	height: 90vh;
+	background: #1c1c1c;
 	background-size: cover;
 	padding-top: 6em;
 }
 
-.dropmeDown{
+.dropmeDown {
 	margin-top: 6em;
 }
 
@@ -372,15 +374,15 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #1C1C1C;
+	background: #1c1c1c;
 	position: fixed;
-    box-sizing: border-box;
-    z-index: 99999999;
-    width: 100%;
+	box-sizing: border-box;
+	z-index: 99999999;
+	width: 100%;
 }
 
 #main-nav {
-	border-top: 1px solid #1C1C1C;
+	border-top: 1px solid #1c1c1c;
 	// @media(min-width:$lg){
 	// 	display: none;
 	// }
@@ -490,7 +492,6 @@ nav {
 	width: 15em;
 }
 
-
 .page-banner {
 	background-color: #000;
 	padding: 5em 0 4em 0;
@@ -575,10 +576,9 @@ svg path {
 	}
 }
 
-
-.centeredOnImg{
-	background-image: url("../../img/JW2022_Website_1920w.png");
-}
+// .centeredOnImg{
+// 	background-image: url("../../img/JW2022_Website_1920w.png");
+// }
 
 //Media Queries for page responsiveness
 
@@ -588,24 +588,37 @@ svg path {
 // $sm: 576px;
 
 //This is for the mobile view
-@media screen and (max-width: $md) {
+@media screen and (max-width: 480px) {
 
 	.bgimage {
-		background-image: url(../img/JW2022_Website_help.png);
-		background-repeat:no-repeat;
-		// background-attachment: fixed;
-		background-position: center; 
+		background-image: url(../img/mobilelanding.png);
+		background-repeat: no-repeat;
+		background-position: center;
 	}
-
-.vh100{
-	height: 100vh;
-}
-
-
 
 	.home-banner {
 		height: 60vh;
-		background: #1C1C1C;
+		background: #1c1c1c;
+		background-size: cover;
+	}
+}
+
+//This is for the mobile view
+@media screen and (max-width: $md) {
+	.bgimage {
+		background-image: url(../img/mobilelanding.png);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		// width: 96%;
+	}
+
+	.vh100 {
+		height: 100vh;
+	}
+
+	.home-banner {
+		background: #1c1c1c;
 		background-size: cover;
 	}
 
@@ -617,7 +630,7 @@ svg path {
 		display: none;
 	}
 
-	.dropmeDown{
+	.dropmeDown {
 		margin-top: 13em;
 	}
 
@@ -670,37 +683,35 @@ svg path {
 		z-index: 20000000;
 	}
 
-.aowBg{
-	background-color: #689eb8;
-    padding-top: 3.5em;
-    padding-bottom: 3.5em;
-	padding-left: 0;
-    padding-right: 0;
-}
+	.aowBg {
+		background-color: #689eb8;
+		padding-top: 3.5em;
+		padding-bottom: 3.5em;
+		padding-left: 0;
+		padding-right: 0;
+	}
 
-.aowText{
-	padding-top: 2em;
-	padding-left: 1em;
-	padding-right: 1em;
-}
+	.aowText {
+		padding-top: 2em;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
 
-.centerflexColumnMobileAOW {
-	display: flex;
-	justify-content: center;
-	flex-direction: column !important; 
-	align-items: center;
-	height: inherit;
-}
-
+	.centerflexColumnMobileAOW {
+		display: flex;
+		justify-content: center;
+		flex-direction: column !important;
+		align-items: center;
+		height: inherit;
+	}
 }
 
 @media screen and (min-width: $md) {
-
 	.bgimage {
 		background-image: url(../img/JW2022_Website_802w_720h.png);
-		background-repeat:no-repeat;
+		background-repeat: no-repeat;
 		background-attachment: fixed;
-		background-position: center; 
+		background-position: center;
 	}
 }
 
@@ -715,15 +726,14 @@ svg path {
 
 	.bgimage {
 		background-image: url(../img/JW2022_Website_1920w.png);
-		height: 100vh;
-		background-repeat:no-repeat;
+		// height: 100vh;
+		background-repeat: no-repeat;
 		background-attachment: fixed;
-		background-position: center; 
+		background-position: center;
 	}
 }
 
 @media screen and (min-width: $xl) {
-	
 	.width100 {
 		width: 100%;
 	}
@@ -734,6 +744,14 @@ svg path {
 		display: flex;
 		justify-content: space-between;
 		flex-flow: row;
+	}
+
+	.bgimage {
+		background-image: url(../img/JW2022_Website_1920w.png);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		height: 100vh;
 	}
 }
 
@@ -801,5 +819,4 @@ svg path {
 	text-decoration: none;
 	border: 1px solid white;
 	font-weight: 600;
-
 }
