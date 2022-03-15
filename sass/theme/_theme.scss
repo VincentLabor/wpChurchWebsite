@@ -587,30 +587,69 @@ svg path {
 // $md: 768px;
 // $sm: 576px;
 
-//This is for the mobile view
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 350px) {
 
 	.bgimage {
-		background-image: url(../img/mobilelanding.png);
+		background-image: url(../img/JW2022_Website_340w.png) !important;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.bgimageAOW {
+		background-image: url(../img/AOW2022_POSTER_340w.png) !important;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+@media screen and (max-width: 390px) {
+
+	.bgimage {
+		background-image: url(../img/JW2022_Website_375w.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.bgimageAOW {
+		background-image: url(../img/AOW2022_POSTER_375w.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+//This is for the mobile view
+@media screen and (max-width: 480px) {
+	.bgimage {
+		background-image: url(../img/JW2022_Website_420w.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.bgimageAOW {
+		background-image: url(../img/AOW2022_POSTER_420w.png);
 		background-repeat: no-repeat;
 		background-position: center;
 	}
 
 	.home-banner {
-		height: 60vh;
+		height: 45vh !important;
 		background: #1c1c1c;
 		background-size: cover;
 	}
 }
 
-//This is for the mobile view
+//This is for the mobile plus view
 @media screen and (max-width: $md) {
 	.bgimage {
-		background-image: url(../img/mobilelanding.png);
+		background-image: url(../img/JW2022_Website_420w.png);
 		background-repeat: no-repeat;
-		background-attachment: fixed;
+		// background-attachment: fixed;
 		background-position: center;
 		// width: 96%;
+	}
+
+	.bgimageAOW {
+		background-image: url(../img/AOW2022_POSTER_420w.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		// background-attachment: fixed;
 	}
 
 	.vh100 {
@@ -620,6 +659,7 @@ svg path {
 	.home-banner {
 		background: #1c1c1c;
 		background-size: cover;
+		height: 60vh;
 	}
 
 	.hideNavMenu {
@@ -708,10 +748,17 @@ svg path {
 
 @media screen and (min-width: $md) {
 	.bgimage {
-		background-image: url(../img/JW2022_Website_802w_720h.png);
+		background-image: url(../img/JW2022_Website_800w.png);
 		background-repeat: no-repeat;
-		background-attachment: fixed;
+		// background-attachment: fixed;
 		background-position: center;
+	}
+
+	.bgimageAOW {
+		background-image: url(../img/AOW2022_POSTER_800w.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		// background-attachment: fixed;
 	}
 }
 
@@ -730,6 +777,13 @@ svg path {
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center;
+	}
+
+	.bgimageAOW {
+		background-image: url(../img/AOW2022_POSTER_1920w.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
 	}
 }
 
@@ -751,6 +805,14 @@ svg path {
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center;
+		height: 100vh;
+	}
+
+	.bgimageAOW {
+		background-image: url(../img/AOW2022_POSTER_1920w.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
 		height: 100vh;
 	}
 }

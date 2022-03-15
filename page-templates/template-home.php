@@ -18,42 +18,7 @@ get_header();
 <header>
     <div class="home-banner">
         <div class="centeredHeading bgimage">
-
             <div class="">
-                <!-- <img class="" srcset="<?php echo get_template_directory_uri();
-                                        ?>/img/JW2022_Website_1920w.png,
-								<?php echo get_template_directory_uri();
-                                ?>/img/JW2022_Website_770w.png, 
-								<?php echo get_template_directory_uri();
-                                ?>/img/JW2022_Website_802w_720h.png," sizes="(max-width: 768px) 802px, (max-width: 576px) 802px, 1920px" class="" alt="Jesuswalk Landing Image"> -->
-
-
-
-                <!-- <img class= "vh100" srcset="<?php echo get_template_directory_uri();
-                                                    ?>/img/JW2022_Website_802w_720h.png,"
-								> -->
-
-                <!-- <img srcset="<?php echo get_template_directory_uri();
-                                    ?>/img/JW2022_Website_1920w.png,
-                                                    <?php echo get_template_directory_uri();
-                                                    ?>/img/JW2022_Website_802w_720h.png,
-                                                    <?php echo get_template_directory_uri();
-                                                    ?>/img/JW2022_Website_802w_720h.png,
-                                                    
-                                                    "> -->
-                <!-- 
-              
-                <picture>
-                    <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri();
-                                                                ?>/img/JW2022_Website_802w_720h.png,">
-                    <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri();
-                                                                ?>/img/JW2022_Website_802w_720h.png,">
-                    <source media="(max-width: 992pxpx)" srcset="<?php echo get_template_directory_uri();
-                                                                    ?>/img/JW2022_Website_1920w.png,">
-                    <img src="<?php echo get_template_directory_uri();
-                                ?>/img/JW2022_Website_802w_720h.png" alt="">
-                </picture> -->
-
             </div>
         </div>
 

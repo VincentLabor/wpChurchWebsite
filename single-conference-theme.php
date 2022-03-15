@@ -13,14 +13,6 @@ get_header();
 
     <div class="centeredHeading bgimage">
  
-        <!-- <div class="">
-            <img srcset="<?php echo get_template_directory_uri();
-                            ?>/img/JW2022_Website_1920w.png,
-								<?php echo get_template_directory_uri();
-                                ?>/img/JW2022_Website_770w.png, 
-								<?php echo get_template_directory_uri();
-                                ?>/img/JW2022_Website_580w.png," sizes="(max-width: 768px) 770px, (max-width: 576px) 580px, 1920px" class="" alt="Jesuswalk Landing Image">
-        </div> -->
     </div>
 
 
