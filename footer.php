@@ -20,7 +20,7 @@ $container = get_theme_mod('understrap_container_type');
 
 	<div class="<?php echo esc_attr($container); ?>">
 
-		<div class="subscribe whiteText bot1EMPadding">
+		<!-- <div class="subscribe whiteText bot1EMPadding">
 			<Strong>
 				<h3>Subscribe</h3>
 			</Strong>
@@ -30,9 +30,9 @@ $container = get_theme_mod('understrap_container_type');
 				<input type="text" name="" id="">
 			</div>
 			<input type="button" value="Submit" class="footerBtn textBlack">
-		</div>
+		</div> -->
 
-		<hr class=" whiteHr bot1EMPadding" />
+		<!-- <hr class=" whiteHr bot1EMPadding" /> -->
 
 		<div id="footerGrid" class="container bot4EMPadding bot1em">
 			<div class="row">

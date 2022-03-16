@@ -127,6 +127,10 @@ div .fillWidth a .reduceSpacingMar {
 	background: #1c1c1c;
 }
 
+.whiteBg {
+	background: #fff;
+}
+
 .graybackground {
 	background-color: #1c1c1c;
 }
@@ -164,6 +168,13 @@ div p .copyRightSize {
 }
 
 .centerflex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: inherit;
+}
+
+.centerFlexPrayer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -303,6 +314,20 @@ body {
 	padding: 1.5em 0 1.5em 0;
 }
 
+.padding2emSides {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.padding8em {
+	padding-top: 14em;
+	padding-bottom: 8em;
+}
+
+.halfWidth {
+	width: 45vw;
+}
+
 .absolute {
 	position: absolute;
 	// width: inherit;
@@ -321,6 +346,13 @@ body {
 
 .home-banner {
 	height: 90vh;
+	background: #1c1c1c;
+	background-size: cover;
+	padding-top: 6em;
+}
+
+.home-bannerAOW {
+	height: 85vh;
 	background: #1c1c1c;
 	background-size: cover;
 	padding-top: 6em;
@@ -576,6 +608,21 @@ svg path {
 	}
 }
 
+.cross {
+	background: red;
+	height: 160px;
+	position: relative;
+	width: 20px;
+}
+.cross:after {
+	background: red;
+	content: "";
+	height: 20px;
+	left: -40px;
+	position: absolute;
+	top: 40px;
+	width: 100px;
+}
 // .centeredOnImg{
 // 	background-image: url("../../img/JW2022_Website_1920w.png");
 // }
@@ -588,6 +635,12 @@ svg path {
 // $sm: 576px;
 
 @media screen and (max-width: 350px) {
+	.home-banner {
+		height: 40vh !important;
+	}
+	.home-bannerAOW {
+		height: 38vh !important;
+	}
 
 	.bgimage {
 		background-image: url(../img/JW2022_Website_340w.png) !important;
@@ -602,7 +655,6 @@ svg path {
 	}
 }
 @media screen and (max-width: 390px) {
-
 	.bgimage {
 		background-image: url(../img/JW2022_Website_375w.png);
 		background-repeat: no-repeat;
@@ -615,6 +667,7 @@ svg path {
 		background-position: center;
 	}
 }
+
 //This is for the mobile view
 @media screen and (max-width: 480px) {
 	.bgimage {
@@ -629,7 +682,12 @@ svg path {
 	}
 
 	.home-banner {
-		height: 45vh !important;
+		height: 47vh !important;
+		background: #1c1c1c;
+		background-size: cover;
+	}
+	.home-bannerAOW {
+		height: 38vh !important;
 		background: #1c1c1c;
 		background-size: cover;
 	}
@@ -637,6 +695,18 @@ svg path {
 
 //This is for the mobile plus view
 @media screen and (max-width: $md) {
+	.centerFlexPrayer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: inherit;
+		flex-direction: column;
+	}
+
+	.halfWidth {
+		width: 100%;
+	}
+
 	.bgimage {
 		background-image: url(../img/JW2022_Website_420w.png);
 		background-repeat: no-repeat;
@@ -659,7 +729,12 @@ svg path {
 	.home-banner {
 		background: #1c1c1c;
 		background-size: cover;
-		height: 60vh;
+		height: 71vh;
+	}
+	.home-bannerAOW {
+		background: #1c1c1c;
+		background-size: cover;
+		height: 65vh;
 	}
 
 	.hideNavMenu {

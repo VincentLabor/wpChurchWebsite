@@ -9,7 +9,7 @@ get_header();
 
 ?>
 
-<div class="home-banner">
+<div class="home-bannerAOW">
     <div class="centeredHeading bgimageAOW">
 
         <!-- <div class="">
