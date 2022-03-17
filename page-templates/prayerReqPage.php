@@ -22,7 +22,7 @@ get_header();
         </p>
     </div>
 
-    <div class="containers halfWidth padding2emSides">
+    <div class="containers halfWidth padding2emSides textAlignLeft maxWidth">
         <?php
         the_content();
         ?>

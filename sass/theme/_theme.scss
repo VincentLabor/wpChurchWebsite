@@ -119,6 +119,10 @@ div .fillWidth a .reduceSpacingMar {
 	padding-right: 20em;
 }
 
+.textAlignLeft {
+	text-align: left;
+}
+
 .aowText {
 	padding-left: 5em;
 }
@@ -140,6 +144,24 @@ body {
 	font-family: "Noto Sans", sans-serif;
 	font-size: 16px;
 	line-height: 1.25;
+}
+
+.fontSz14 {
+	font-size: 14px;
+}
+
+footerSpacing {
+}
+
+.footeritems {
+	letter-spacing: 1.75px;
+	padding: 0.5rem 0rem;
+	font-weight: 200;
+	text-decoration: none !important;
+}
+
+.footeritems:hover {
+	text-decoration: none !important;
 }
 
 .copyRightSize {
@@ -345,7 +367,7 @@ body {
 }
 
 .home-banner {
-	height: 90vh;
+	height: 85vh;
 	background: #1c1c1c;
 	background-size: cover;
 	padding-top: 6em;
@@ -518,6 +540,10 @@ nav {
 	color: black;
 }
 
+.maxWidth {
+	max-width: 100%;
+}
+
 .imageBox {
 	border: solid white 1px;
 	height: 20em;
@@ -682,7 +708,7 @@ svg path {
 	}
 
 	.home-banner {
-		height: 47vh !important;
+		height: 43vh !important;
 		background: #1c1c1c;
 		background-size: cover;
 	}
@@ -904,6 +930,13 @@ svg path {
 
 .wrapper {
 	padding-top: 3.5em;
+	background-color: #1c1c1c;
+	padding-bottom: 2em;
+	text-align: center;
+}
+
+.footer-container {
+	padding-top: 1.5em;
 	background-color: #1c1c1c;
 	padding-bottom: 2em;
 	text-align: center;

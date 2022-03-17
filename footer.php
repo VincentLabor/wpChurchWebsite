@@ -16,7 +16,7 @@ $container = get_theme_mod('understrap_container_type');
 
 <?php get_template_part('sidebar-templates/sidebar', 'footerfull'); ?>
 
-<div class="wrapper" id="wrapper-footer">
+<div class="footer-container" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr($container); ?>">
 
@@ -69,7 +69,8 @@ $container = get_theme_mod('understrap_container_type');
 						</a>
 					</div>
 				</div>
-				<div class="col-sm whiteText centerflexColumn">
+				<div class="col-sm whiteText centerflex">
+
 					<div class="container whiteText letterSpace centerflexColumn">
 
 						<!-- The WordPress Menu goes here -->
@@ -82,7 +83,7 @@ $container = get_theme_mod('understrap_container_type');
 									'container_class' => '',
 									'container_id'    => 'footerNav',
 									// 'container_id'    => 'navbarNavDropdown',
-									'menu_class'      => 'navbar-nav',
+									'menu_class'      => 'navbar-nav fontSz14',
 									'fallback_cb'     => '',
 									'menu_id'         => 'main-menu', //this is just semantic and there is no actual class. 
 									'depth'           => 3,
@@ -90,9 +91,10 @@ $container = get_theme_mod('understrap_container_type');
 								)
 							)
 						));
-
 						?>
- 
+
+
+
 						<!-- This section determines if the login/register buttons appear or not.  -->
 						<?php if ('container' === $container) : ?>
 							<?php if (!is_user_logged_in()) { ?>
@@ -104,8 +106,16 @@ $container = get_theme_mod('understrap_container_type');
 
 							<?php }; ?>
 					</div><!-- .container -->
+
+					<div class="centerflexColumn width90">
+
+						<a href="https://kpm.mkl.mybluehost.me/prayer-request/" class=" fontSz14 footeritems">Prayer request</a>
+						<a href="https://kpm.mkl.mybluehost.me/counselor-program/" class=" fontSz14 footeritems">Counselor Program</a>
+						<a href="https://kpm.mkl.mybluehost.me/covid-19-response/" class=" fontSz14 footeritems">Covid 19 Response</a>
+					</div>
+
 				<?php endif; ?>
-					
+
 				</div>
 
 			</div>
