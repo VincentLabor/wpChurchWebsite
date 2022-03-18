@@ -29,8 +29,8 @@ get_header();
             <img src="<?php echo get_template_directory_uri();
                         ?>/img/icon/instaIcon24w.png" alt="" class="halfPadding ">
         </a>
-    </div>
-</div> -->
+    </div>-->
+</div> 
 
 <?php
 the_content();
