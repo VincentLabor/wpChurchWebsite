@@ -30,18 +30,11 @@ $container = get_theme_mod('understrap_container_type');
 <body <?php understrap_body_attributes(); ?> class="">
 	<?php do_action('wp_body_open'); ?>
 	<div class="site menuCenter" id="page">
-		<!-- ******************* The Navbar Area ******************* -->
+		<!-- ******************* The Navbar Area ******************* -->\
+
+		<!-- JW_Logo_SideText.png -->
 		<div id="wrapper-navbar menuCenter">
-			<!-- JW_Logo_SideText.png -->
-			<a href="/" class=" whiteText"><img src="<?php echo get_template_directory_uri(); ?>/img/icon/JW_Logohalf.png" alt="Jesuswalk Logo"></a>
-
-			<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/JW_WHITE-113w.png" alt="Jesuswalk Logo"> -->
-
-			<!-- <img srcset="<?php echo get_template_directory_uri();
-								?>/img/JW_WHITE-170w.png 170w,
-								<?php echo get_template_directory_uri();
-								?>/img/JW_WHITE-113w.png 113w," sizes="(max-width: 768px) 113px, 170px" class="top1EMPadding" alt="Jesuswalk Logo"> -->
-
+			<a href="/" class=""><img src="<?php echo get_template_directory_uri(); ?>/img/icon/JW_Logohalf.png" alt="Jesuswalk Logo"></a>
 		</div>
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
@@ -55,7 +48,7 @@ $container = get_theme_mod('understrap_container_type');
 
 			<div class="container whiteText letterSpace ">
 
-				<a href="/"class="hideForMobile">
+				<a href="/" class="hideForMobile">
 					<i class="fa fa-home fa-lg " aria-hidden="true"></i>
 				</a>
 
@@ -84,8 +77,6 @@ $container = get_theme_mod('understrap_container_type');
 				));
 				?>
 
-				<a href="https://givebutter.com/jesuswalk-donate"><input type="button" value="Donate" class="donateBtn hideForMobile"></a>
-
 				<!-- This section determines if the login/register buttons appear or not.  -->
 				<?php if ('container' === $container) : ?>
 					<?php if (!is_user_logged_in()) { ?>
@@ -96,14 +87,44 @@ $container = get_theme_mod('understrap_container_type');
 						<a href="<?php echo wp_logout_url(); ?>" data-toggle="dropdown" class="loginBtn collapse navbar-collapse flexspace">logout</a> -->
 
 					<?php }; ?>
+					<p></p>
 			</div><!-- .container -->
+
 		<?php endif; ?>
+
+
 
 		<!-- I will superpposition the nav menu here. -->
 
+		<!-- 
 
+
+MOBILE
+MOBILE
+MOBILE below
+
+
+ -->
 
 		</nav><!-- .site-navigation -->
+<!-- this will not apper on mobile and probably not tablet -->
+		<div class="centerflex hideForMobile">
+			<a href="https://givebutter.com/jesuswalk-donate"><input type="button" value="Donate" class="donateBtn hideForMobile"></a>
+			<a href="https://www.youtube.com/user/jesuswalkyouth">
+				<img src="<?php echo get_template_directory_uri();
+							?>/img/icon/ytIcon24w.png" alt="" class="left1emPd">
+			</a>
+			<a href="https://www.facebook.com/jesuswalkyouth/">
+				<img src="<?php echo get_template_directory_uri();
+							?>/img/icon/fbIcon24w.png" alt="" class="left1emPd">
+			</a>
+			<a href="https://www.instagram.com/jesuswalkyouth/?hl=en">
+				<img src="<?php echo get_template_directory_uri();
+							?>/img/icon/instaIcon24w.png" alt="" class="left1emPd">
+			</a>
+		</div>
+
+
 		<div id="navMenu" class="hidden mobileMenuNav textWhite centerflex fontSz18">
 			<div class="centerflexColumn">
 				<a href="/">

@@ -30,10 +30,6 @@ nav .container .navbar-collapse {
 	color: white;
 }
 
-// .container .navbar-collapse a{
-// 	color: white;
-// }
-
 body {
 	height: 100%;
 }
@@ -148,9 +144,6 @@ body {
 
 .fontSz14 {
 	font-size: 14px;
-}
-
-footerSpacing {
 }
 
 .footeritems {
@@ -346,6 +339,10 @@ body {
 	padding-bottom: 8em;
 }
 
+.left1emPd{
+	padding-left: 1em;
+}
+
 .halfWidth {
 	width: 45vw;
 }
@@ -367,7 +364,7 @@ body {
 }
 
 .home-banner {
-	height: 85vh;
+	height: 88vh;
 	background: #1c1c1c;
 	background-size: cover;
 	padding-top: 6em;
