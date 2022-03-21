@@ -68,7 +68,7 @@ function pageBanner($args = NULL)
 ?>
 
   <!-- This is the default header for events -->
-  <div class="page-banner bot3emMargin">
+  <div class="page-banner bot3emMargin paddingtop10em">
     <div class="page-banner__bg-image flexImage graybackground">
       <!-- <img src="<?php //echo $args['photo']; ?>" alt="" class="bannerImg"> -->
       <!-- come back here. We will be adding logos or things here. -->

@@ -2,7 +2,7 @@
 
 get_header();
 pageBanner(array(
-  'title' => get_the_archive_title(),
+  'title' => "Events",
   'subtitle' => ""
 ));
 

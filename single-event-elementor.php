@@ -24,7 +24,7 @@ while (have_posts()) {
       <!-- <span class=""><?php //the_title(); ?></span> -->
       </p>
     </div>
-    <div class=""><?php the_content(); ?></div>
+    <div class="showNothing"><?php the_content(); ?></div>
   </div>
 
   <hr class="section-break">

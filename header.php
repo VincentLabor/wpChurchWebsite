@@ -109,19 +109,19 @@ MOBILE below
 		</nav><!-- .site-navigation -->
 <!-- this will not apper on mobile and probably not tablet -->
 		<div class="centerflex hideForMobile">
-			<a href="https://givebutter.com/jesuswalk-donate"><input type="button" value="Donate" class="donateBtn hideForMobile"></a>
 			<a href="https://www.youtube.com/user/jesuswalkyouth">
 				<img src="<?php echo get_template_directory_uri();
-							?>/img/icon/ytIcon24w.png" alt="" class="left1emPd">
+							?>/img/icon/ytIcon24w.png" alt="" class="left1emPd hide">
 			</a>
 			<a href="https://www.facebook.com/jesuswalkyouth/">
 				<img src="<?php echo get_template_directory_uri();
-							?>/img/icon/fbIcon24w.png" alt="" class="left1emPd">
+							?>/img/icon/fbIcon24w.png" alt="" class="left1emPd hide">
 			</a>
 			<a href="https://www.instagram.com/jesuswalkyouth/?hl=en">
 				<img src="<?php echo get_template_directory_uri();
-							?>/img/icon/instaIcon24w.png" alt="" class="left1emPd">
+							?>/img/icon/instaIcon24w.png" alt="" class="left1emPd hide">
 			</a>
+			<a href="https://givebutter.com/jesuswalk-donate"><input type="button" value="Donate" class="donateBtn hideForMobile"></a>
 		</div>
 
 
