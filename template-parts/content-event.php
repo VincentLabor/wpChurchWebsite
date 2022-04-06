@@ -15,7 +15,7 @@
     </a>
   </div>
 
-  <div class="eventInfo fillWidth centeredItem">
+  <div class="eventInfo fillWidth centeredItem left1emPd">
     <div class="fillWidth whiteText">
 
       <!-- Title of the post -->
@@ -29,7 +29,7 @@
         echo $eventDate->format('F')
         ?>
       </span>
-      <span class=" "><?php echo $eventDate->format('jS') ?></span>
+      <span class="dateFont-size "><?php echo $eventDate->format('jS') ?></span>
 
 
       <!-- See more -->
@@ -43,7 +43,7 @@
 </div>
 
 <!-- This will display for mobile users. Will hide once on desktop. -->
-<div class="centerflex leftAlignMobile padTopBot1n5em eventItem2 colForMobile hideOnDesktop">
+<div class="centerflex leftAlignMobile padTopBot1n5em eventItem2 colForMobile hideOnDesktopEvents">
 
   <h3 class="eventTitle"><a class="textBlack bolden800 " href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
@@ -65,7 +65,7 @@
         echo $eventDate->format('F')
         ?>
       </span>
-      <span class=" "><?php echo $eventDate->format('jS') ?></span>
+      <span class="dateFont-size "><?php echo $eventDate->format('jS') ?></span>
     </p>
   </div>
 

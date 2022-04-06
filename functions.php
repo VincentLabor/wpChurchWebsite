@@ -68,9 +68,10 @@ function pageBanner($args = NULL)
 ?>
 
   <!-- This is the default header for events -->
-  <div class="page-banner bot3emMargin paddingtop10em">
+  <div class="page-banner bot3emMargin">
     <div class="page-banner__bg-image flexImage graybackground">
-      <!-- <img src="<?php //echo $args['photo']; ?>" alt="" class="bannerImg"> -->
+      <!-- <img src="<?php //echo $args['photo']; 
+                      ?>" alt="" class="bannerImg"> -->
       <!-- come back here. We will be adding logos or things here. -->
     </div>
     <div class="page-banner__content container container--narrow">
@@ -183,3 +184,31 @@ function prefix_send_email_to_admin()
     }
   }
 };
+
+
+
+/** Step 2 (from text above). */
+add_action('admin_menu', 'my_plugin_menu');
+
+/** Step 1. */
+function my_plugin_menu()
+{
+  add_menu_page('My Plugin Options', 'Personalization', 'manage_options', 'personalization-detail', 'my_plugin_options');
+}
+
+
+// add_action("admin_menu","connectDB");
+
+// function connectDB(){
+//   $servername = "wordpress";
+//   $username =  "root";
+//   $password =  "";
+//   $hostes = "127.0.0.1";
+  
+//   $conn = mysqli_connect($hostes, $username, $password, $servername);
+//   if($conn){
+//     echo "The connection workedddddddddddddddddddddddddddddddddddddddddddddddddddddd";
+//   }
+// }
+
+

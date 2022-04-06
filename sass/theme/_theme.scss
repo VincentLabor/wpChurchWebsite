@@ -3,6 +3,7 @@ $primary: #1c1c1c;
 $secondary: white; //#83c5be
 $background: #c5e4e1;
 $backgroundColorCyan: #689eb8;
+$darkCyan: #005a7a;
 
 //The reason why the hover for everything was red was because of _reboot.scss at 185.
 
@@ -30,10 +31,14 @@ nav .container .navbar-collapse {
 	color: white;
 }
 
-.eventBg{
+.eventBg {
 	background-color: #689eb8;
 	padding-top: 12em;
 	padding-bottom: 12em;
+}
+
+.darkCyanBg {
+	background-color: $darkCyan;
 }
 
 body {
@@ -110,6 +115,10 @@ div .fillWidth a .reduceSpacingMar {
 	margin-top: -3em;
 	padding-top: 3.5em;
 	padding-bottom: 3.5em;
+}
+
+.backgroundcolorCyan {
+	background-color: $backgroundColorCyan;
 }
 
 //This sets up the padding and margins for AOW
@@ -282,6 +291,18 @@ body {
 	padding: 1em 0 1em 0;
 }
 
+.formStylingReg {
+	padding: 0.3;
+	background-color: $backgroundColorCyan;
+	border: none;
+	border-bottom: solid 1px black;
+	color: white;
+}
+
+.leftMargin0 {
+	margin-left: 0 !important;
+}
+
 .top4EMPadding {
 	padding-top: 4em;
 }
@@ -349,12 +370,20 @@ body {
 	padding-left: 1em;
 }
 
-.paddingtop10em{
+.paddingtop10em {
 	padding-top: 10em;
 }
 
 .halfWidth {
 	width: 45vw;
+}
+
+.fiftyWidth {
+	width: 50%;
+}
+
+.em1RemoveBot {
+	margin-top: -1em;
 }
 
 .absolute {
@@ -458,10 +487,10 @@ ul {
 			//This is every specific menu item.
 			font-weight: 200;
 			// text-transform: uppercase;
-			font-size: 16px;
+			font-size: 14px;
 			padding: 1em 1em;
 			@media (max-width: $xl) {
-				font-size: 18px;
+				font-size: 14px;
 				padding: 1em 0.33em;
 			}
 		}
@@ -599,7 +628,7 @@ svg path {
 	width: 80%;
 }
 
-.showNothing{
+.showNothing {
 	display: none;
 }
 
@@ -719,7 +748,7 @@ svg path {
 	}
 
 	.home-banner {
-		height: 43vh !important;
+		height: 48vh !important;
 		background: #1c1c1c;
 		background-size: cover;
 	}
@@ -835,8 +864,6 @@ svg path {
 		z-index: 20000000;
 	}
 
-
-
 	.aowBg {
 		background-color: #689eb8;
 		padding-top: 3.5em;
@@ -880,13 +907,25 @@ svg path {
 	.hide {
 		display: none;
 	}
+	.hideForMobile {
+		display: none;
+	}
 }
 
+//lg = 992px
 
-
+@media screen and (min-width: 770px) {
+	.hideOnDesktopEvents {
+		display: none;
+	}
+}
 
 @media screen and (min-width: $lg) {
 	.hideMobileMenu {
+		display: none;
+	}
+
+	.hideOnDesktopEvents {
 		display: none;
 	}
 
@@ -910,6 +949,8 @@ svg path {
 	}
 }
 
+// xl =  1440px
+
 @media screen and (min-width: $xl) {
 	.width100 {
 		width: 100%;
@@ -921,6 +962,10 @@ svg path {
 		display: flex;
 		justify-content: space-between;
 		flex-flow: row;
+	}
+
+	.hideOnDesktopEvents {
+		display: none;
 	}
 
 	.bgimage {
@@ -1011,4 +1056,202 @@ svg path {
 	text-decoration: none;
 	border: 1px solid white;
 	font-weight: 600;
+}
+
+/*
+
+Styling for the Conference registration form!
+
+*/
+
+#wpforms-1760 div.wpforms-container-full .wpforms-form .wpforms-title {
+	font-size: 35px !important;
+	font-weight: 800;
+}
+
+#wpforms-submit-526 .wpforms-form .wpforms-submit {
+	padding: 0.5em;
+	outline: none;
+	border: none;
+	background-color: white !important;
+}
+
+input#wpforms-1760-field_1 {
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+input#wpforms-1760-field_1-last {
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//Birthday
+input#wpforms-1760-field_45{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//Phonenumber
+input#wpforms-1760-field_47{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//Email
+input#wpforms-1760-field_11{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//Address
+input#wpforms-1760-field_12{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//Address2
+input#wpforms-1760-field_14{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//City
+input#wpforms-1760-field_48{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//State/province
+input#wpforms-1760-field_49{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//zip/postal
+input#wpforms-1760-field_25{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//country
+input#wpforms-1760-field_32{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//homechurch
+input#wpforms-1760-field_18{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//name of parent/guardian
+input#wpforms-1760-field_34{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+//last name of guardian
+input#wpforms-1760-field_34-last{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//relationship
+input#wpforms-1760-field_35{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//addy1
+input#wpforms-1760-field_36{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//addy2
+input#wpforms-1760-field_37{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//city
+input#wpforms-1760-field_50{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//state/province parnt
+input#wpforms-1760-field_51{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//zip parent
+input#wpforms-1760-field_53{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	
+}
+
+//country parent
+input#wpforms-1760-field_54{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+//phone parent
+input#wpforms-1760-field_52{
+	padding: 0.3em;
+	border-radius: 5px;
+	border: .5px solid lightgray;
+	;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }

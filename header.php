@@ -67,7 +67,7 @@ $container = get_theme_mod('understrap_container_type');
 							'theme_location'  => 'primary',
 							'container_class' => 'collapse navbar-collapse flexspace colorwhite',
 							'container_id'    => 'navbarNavDropdown',
-							'menu_class'      => 'navbar-nav hideNavMenu',
+							'menu_class'      => 'navbar-nav',
 							'fallback_cb'     => '',
 							'menu_id'         => 'main-menu', //this is just semantic and there is no actual class. 
 							'depth'           => 3,
@@ -107,7 +107,7 @@ MOBILE below
  -->
 
 		</nav><!-- .site-navigation -->
-<!-- this will not apper on mobile and probably not tablet -->
+		<!-- this will not apper on mobile and probably not tablet -->
 		<div class="centerflex hideForMobile">
 			<a href="https://www.youtube.com/user/jesuswalkyouth">
 				<img src="<?php echo get_template_directory_uri();
@@ -121,14 +121,15 @@ MOBILE below
 				<img src="<?php echo get_template_directory_uri();
 							?>/img/icon/instaIcon24w.png" alt="" class="left1emPd hide">
 			</a>
+
 			<a href="https://givebutter.com/jesuswalk-donate"><input type="button" value="Donate" class="donateBtn hideForMobile"></a>
 		</div>
 
 
 		<div id="navMenu" class="hidden mobileMenuNav textWhite centerflex fontSz18">
 			<div class="centerflexColumn">
-				<a href="/">
-					<p>Home</p>
+				<a href="/" class="">
+					<p class="fontSz14">Home</p>
 				</a>
 				<!-- This menu only appears on mobile and does not appear in desktop view. -->
 				<?php

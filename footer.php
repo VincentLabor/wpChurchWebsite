@@ -80,7 +80,7 @@ $container = get_theme_mod('understrap_container_type');
 							wp_nav_menu(
 								array(
 									'theme_location'  => 'primary',
-									'container_class' => '',
+									'container_class' => 'fontSz14',
 									'container_id'    => 'footerNav',
 									// 'container_id'    => 'navbarNavDropdown',
 									'menu_class'      => 'navbar-nav fontSz14',
@@ -109,9 +109,9 @@ $container = get_theme_mod('understrap_container_type');
 
 					<div class="centerflexColumn width90">
 
-						<a href="https://kpm.mkl.mybluehost.me/prayer-request/" class=" fontSz14 footeritems">Prayer request</a>
-						<a href="https://kpm.mkl.mybluehost.me/counselor-program/" class=" fontSz14 footeritems">Counselor Program</a>
-						<a href="https://kpm.mkl.mybluehost.me/covid-19-response/" class=" fontSz14 footeritems">Covid 19 Response</a>
+						<a href="https://www.jesuswalkyouth.com/prayer-request/" class=" fontSz14 footeritems">Prayer request</a>
+						<a href="https://www.jesuswalkyouth.com/counselor-program/" class=" fontSz14 footeritems">Counselor Program</a>
+						<a href="https://www.jesuswalkyouth.com/covid-19-response/" class=" fontSz14 footeritems">Covid 19 Response</a>
 					</div>
 
 				<?php endif; ?>
@@ -124,7 +124,7 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="site-info copyRightSize whiteText ">
 			<?php understrap_site_info(); ?>
 			<p class="whiteText copyRightSize width40 copyWidth">
-				Copyright © 2020 JesusWalk Youth Conference Organization, All rights reserved.
+				Copyright © 2022 JesusWalk Youth Conference Organization, All rights reserved.
 			</p>
 		</div><!-- .site-info -->
 	</div><!-- container end -->
