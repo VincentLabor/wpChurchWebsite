@@ -163,13 +163,14 @@ function prefix_send_email_to_admin()
     //These are the items that are to be sent to the database
     //Will need to create the table before hand before sending these items.
     $data = array(
-      'fullname' => $_POST['fullname'],
+      'firstName' => $_POST['firstName'],
+      'lastName' => $_POST['lastName'],
       'email' => $_POST['email'],
-      'message' => $_POST['message'],
+      'typeOfReg' => $_POST['typeOfReg'],
     );
 
     //This is the name of the table in the database
-    $table_name = "registrants";
+    $table_name = "{$wpdb->prefix}jwalk_conf_registration";
 
     $result = $wpdb->insert($table_name, $data, $format = NULL);
 

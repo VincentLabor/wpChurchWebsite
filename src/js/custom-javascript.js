@@ -29,3 +29,11 @@ navMenuBtn.onclick = () => {
 		console.log("clicked on");
 	}
 };
+
+
+const submitBtn = document.getElementById("regSubmitBtn");
+submitBtn.onclick = ()=>{
+	console.log("This button has been clicked.");
+	//  window.location.assign("https://www.w3schools.com");
+	window.open("https://givebutter.com/PFVLSZ", '_blank');
+};

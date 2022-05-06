@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: Test plugin to test
+ * Plugin Name: Jwalk Registration plugin
  * Description: Used to display the data of registrants for Jwalk
  * Plugin URI: 
  * Author: Vincent Labor
@@ -9,6 +9,8 @@
  * Author URI: vincentlabor.com
  */
 
+
+ //Users is the prior table used to get the information
 ?>
 
 <?php
