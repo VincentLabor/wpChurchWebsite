@@ -192,13 +192,12 @@ JesusWalk students are expected to be considerate of facilities on site and be c
 By checking the box below you agree to all the terms above.</label> -->
 
     <label>Agreement to Participate</label>
-    <label><input type="checkbox"> I agree to participate</label>
+    <label><input type="checkbox" id="agreeToParticipate" value="agree" required> I agree to participate</label>
 
-
+    <p id="errorText"></p>
     <div>
         <!-- The givebutter link will look commented only because of the // in the url -->
-        
-        <input type="submit" value="Submit" name="confSubmit" id="regSubmitBtn"/>
+        <input type="submit" value="Submit" name="confSubmit" id="regSubmitBtn" />
         <!-- <input type="submit" value="Submit" name="confSuhttps://www.example.com/testbmit" onclick="window.location.href='https://givebutter.com/PFVLSZ'"/> -->
     </div>
   </form>

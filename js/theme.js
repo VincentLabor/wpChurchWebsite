@@ -7093,11 +7093,21 @@ navMenuBtn.onclick = () => {
     console.log("clicked on");
   }
 };
+//This is the checkbox that certifies that the user agrees to all the conditions.
+const agreement = document.getElementById("agreeToParticipate"); //This is the submit button
 
 const submitBtn = document.getElementById("regSubmitBtn");
+const errorTxt = document.getElementById("errorText");
+const agree2Part = document.getElementById("agreeToParticipate");
 
 submitBtn.onclick = () => {
-  console.log("This button has been clicked."); //  window.location.assign("https://www.w3schools.com");
+  console.log("This button has been clicked.");
+  console.log(document.querySelector('#agreeToParticipate').value);
 
-  window.open("https://givebutter.com/PFVLSZ", '_blank');
+  if (document.querySelector('#agreeToParticipate').checked) {
+    window.open("https://givebutter.com/PFVLSZ", '_blank');
+  } else {
+    errorTxt.innerHTML = "Please agree before moving forward.";
+  } // agreement.requirement = true;
+
 };
