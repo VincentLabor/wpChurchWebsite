@@ -11,7 +11,9 @@ submitBtn.onclick = ()=>{
 
     if(document.querySelector('#agreeToParticipate').checked){
         window.open("https://givebutter.com/PFVLSZ", '_blank');
+        //http://localhost/wordpress/conferences/thank-you-for-registering/
     } else {
+        //This has to be edited later for the text to be red. 
         errorTxt.innerHTML = "Please agree before moving forward."
     }
     // agreement.requirement = true;
