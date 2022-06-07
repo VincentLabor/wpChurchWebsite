@@ -213,3 +213,16 @@ function my_plugin_menu()
 // }
 
 
+function create_custome_menu_admin(){
+	$page_title = 'Page Title';
+	$page_name = 'Menu Name';
+	$page_scope = 'manage_options';
+	$page_url = 'page-url';
+	$page_func = 'call_back_function_name';
+	add_menu_page($page_title, $page_name, $page_scope, $page_url, $page_func);
+}
+add_action('admin_menu', 'create_custome_menu_admin');
+ 
+function call_back_function_name(){
+	include('include_your_file_name.php');
+}

@@ -48,7 +48,7 @@ $container = get_theme_mod('understrap_container_type');
 
 			<div class="container whiteText letterSpace ">
 
-				<a href="/" class="hideForMobile">
+				<a href="/" class="">
 					<i class="fa fa-home fa-lg " aria-hidden="true"></i>
 				</a>
 
@@ -67,7 +67,7 @@ $container = get_theme_mod('understrap_container_type');
 							'theme_location'  => 'primary',
 							'container_class' => 'collapse navbar-collapse flexspace colorwhite',
 							'container_id'    => 'navbarNavDropdown',
-							'menu_class'      => 'navbar-nav',
+							'menu_class'      => 'navbar-nav hideNavMenu',
 							'fallback_cb'     => '',
 							'menu_id'         => 'main-menu', //this is just semantic and there is no actual class. 
 							'depth'           => 3,
@@ -126,7 +126,7 @@ MOBILE below
 		</div>
 
 
-		<div id="navMenu" class="hidden mobileMenuNav textWhite centerflex fontSz18">
+		<div id="navMenu" class="hidden mobileMenuNav textWhite centerflex fontSz18 hideMobileMenu">
 			<div class="centerflexColumn">
 				<a href="/" class="">
 					<p class="fontSz14">Home</p>

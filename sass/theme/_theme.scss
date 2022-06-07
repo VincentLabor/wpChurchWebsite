@@ -84,6 +84,10 @@ body {
 	color: #fecf00 !important;
 }
 
+.redText{
+	color: red;
+}
+
 .whiteText {
 	color: white;
 }
@@ -378,7 +382,7 @@ body {
 	width: 45vw;
 }
 
-.fiftyWidth {
+.responsiveWidth {
 	width: 50%;
 }
 
@@ -760,6 +764,7 @@ svg path {
 }
 
 //This is for the mobile plus view
+//$md: 768px;
 @media screen and (max-width: $md) {
 	.centerFlexPrayer {
 		display: flex;
@@ -767,6 +772,11 @@ svg path {
 		align-items: center;
 		height: inherit;
 		flex-direction: column;
+	}
+
+	//This is a test for mobile
+	.responsiveWidth{
+		width: 90%;
 	}
 
 	.halfWidth {
@@ -887,6 +897,7 @@ svg path {
 	}
 }
 
+//$md: 768px;
 @media screen and (min-width: $md) {
 	.bgimage {
 		background-image: url(../img/JW2022_Website_800w.png);
@@ -903,16 +914,21 @@ svg path {
 	}
 }
 
-@media screen and (max-width: 1134px) {
+
+@media screen and (max-width: 1000px) {
 	.hide {
 		display: none;
 	}
 	.hideForMobile {
 		display: none;
 	}
+
+	.hideNavMenu{
+		display: none;
+	}
 }
 
-//lg = 992px
+
 
 @media screen and (min-width: 770px) {
 	.hideOnDesktopEvents {
@@ -920,6 +936,7 @@ svg path {
 	}
 }
 
+//lg = 992px
 @media screen and (min-width: $lg) {
 	.hideMobileMenu {
 		display: none;

@@ -53,17 +53,17 @@ $address = $address2 = $city = $state = $zip = $country = $homeChurch = $heardOf
 
 
 
-  // $sql = "INSERT INTO wp_jwalk_conf_registration (firstName) VALUES ($firstName)";
-  // $rs = mysqli_query($wpdb, $sql);
-  //If everything goes well, redirect user to front page
-  // if ($result == 1) {
-  //   wp_redirect("http://localhost/wordpress/");
-  //   exit;;
-  // } else {
-  //   //Need to implement a way to fix error handling on form submissions.
-  //   wp_redirect("http://localhost/wordpress/conferences/conference-registration/");
-  //   echo "<script>alert('There seems to be an error')</script>";
-  // }
+// $sql = "INSERT INTO wp_jwalk_conf_registration (firstName) VALUES ($firstName)";
+// $rs = mysqli_query($wpdb, $sql);
+//If everything goes well, redirect user to front page
+// if ($result == 1) {
+//   wp_redirect("http://localhost/wordpress/");
+//   exit;;
+// } else {
+//   //Need to implement a way to fix error handling on form submissions.
+//   wp_redirect("http://localhost/wordpress/conferences/conference-registration/");
+//   echo "<script>alert('There seems to be an error')</script>";
+// }
 // };
 
 
@@ -76,51 +76,57 @@ $address = $address2 = $city = $state = $zip = $country = $homeChurch = $heardOf
 
 <div id="registration" class="bot2EMPadding top2EMPadding backgroundcolorCyan centerflexColumn">
   <h2>Conference Registration Form</h2>
+  <br />
   <!-- get_permalink gives me http://localhost/wordpress/conferences/conference-registration/ -->
   <form action="http://localhost/wordpress/conferences/thank-you-for-registering/" method="post" class="centerflexColumn">
-    <div id="name">
-      First Name: <input type="text" name="firstName" value="<?php echo $firstName; ?>">
-      Last Name: <input type="text" name="lastName" value="<?php echo $lastName; ?>">
+    <div id="name">      
     </div>
 
-    <br />
-
-    Email Name: <input type="text" name="email" value="<?php $email; ?>">
-    <br />
     <div>
-      <label>Registration Type</label>
+      <h4>Personal Information</h4>
+    <label>
+      First Name: <input type="text" name="firstName" value="<?php echo $firstName; ?>">
+      </label>
+
       <br />
-      <div>
-        <input type="radio" checked="checked" name="typeOfReg"<?php
-                                              if (isset($student) && $student = "student") echo "checked"; ?> value="student"> <label for="student">Student</label>
-      </div>
-      <div> <input type="radio" name="typeOfReg"<?php
-                                                  if (isset($counselor) && $counselor = "counselor") echo "checked"; ?> value="Counselor"> <label>Counselor</label></div>
+    
+      <label>
+      Last Name: <input type="text" name="lastName" value="<?php echo $lastName; ?>">
+      </label>
 
-      <div>
-        <input type="radio" name="typeOfReg"<?php if (isset($volunteer) && $volunteer = "volunteer") echo "checked"; ?> value="Volunteer"> <label>Volunteer</label>
-      </div>
-      <br>
+    <br />
 
-
+    <div>
       <!-- 
         --
       This shows me the errors that may occur  
       <?php echo $wpdb->print_error(); ?> 
       --
       -->
-
     </div>
 
-    Gender
+<label>
+Gender
     <select name="gender">
       <option value="male">Male</option>
       <option value="female">Female</option>
       <option value="pna">Prefer not to answer</option>
     </select>
+</label>
+<br />
 
-    Birthday
+<label>
+Email Name: <input type="text" name="email" value="<?php $email; ?>">
+</label>
+<br />
+
+<label>
+Birthday
     <input type="date" name="birthday" value="2017-06-01">
+</label>
+
+</div>
+<br />
 
     School Grade going into the Fall
     <select name="grade">
@@ -169,6 +175,19 @@ $address = $address2 = $city = $state = $zip = $country = $homeChurch = $heardOf
     Home church (If applicable)
     <input type="text" name="homeChurch" value="<?php echo $homeChurch; ?> ">
 
+    <label>Registration Type</label>
+      <br />
+      <div>
+        <input type="radio" checked="checked" name="typeOfReg" <?php
+                                                                if (isset($student) && $student = "student") echo "checked"; ?> value="student"> <label for="student">Student</label>
+      </div>
+      <div> <input type="radio" name="typeOfReg" <?php
+                                                  if (isset($counselor) && $counselor = "counselor") echo "checked"; ?> value="Counselor"> <label>Counselor</label></div>
+
+      <div>
+        <input type="radio" name="typeOfReg" <?php if (isset($volunteer) && $volunteer = "volunteer") echo "checked"; ?> value="Volunteer"> <label>Volunteer</label>
+      </div>
+
     How Did you hear about Jesuswalk this year?
     <textarea rows="4" cols="50" name="heardOfJwalk" value="<?php echo $heardOfJwalk ?>"></textarea>
 
@@ -176,17 +195,17 @@ $address = $address2 = $city = $state = $zip = $country = $homeChurch = $heardOf
     <label>Agreement to Participate</label>
     <label><input type="checkbox" id="agreeToParticipate" value="agree" required> I agree to participate</label>
 
-    <p id="errorText"></p>
+    <p id="errorText" class="redText"></p>
     <div>
-        <!-- The givebutter link will look commented only because of the // in the url -->
-        <input type="submit" value="Submit" name="confSubmit" id="regSubmitBtn" />
-        <!-- <input type="submit" value="Submit" name="confSuhttps://www.example.com/testbmit" onclick="window.location.href='https://givebutter.com/PFVLSZ'"/> -->
+      <!-- The givebutter link will look commented only because of the // in the url -->
+      <input type="submit" value="Submit" name="confSubmit" id="regSubmitBtn" />
+      <!-- <input type="submit" value="Submit" name="confSuhttps://www.example.com/testbmit" onclick="window.location.href='https://givebutter.com/PFVLSZ'"/> -->
     </div>
   </form>
 
-<?php
+  <?php
   the_content();
-?>
+  ?>
 
 </div>
 
@@ -195,3 +214,26 @@ $address = $address2 = $city = $state = $zip = $country = $homeChurch = $heardOf
 get_footer();
 
 ?>
+
+
+<!-- CREATE TABLE wp_jwalk_conf_registration(
+ID int NOT NULL unique AUTO_INCREMENT,
+  firstName varchar(255),
+  lastName varchar(255),
+  email varchar(255),
+  typeOfReg varchar(255),
+  gender varchar(255),
+  birthday varchar(255),
+  grade varchar(255),
+  shirtSize varchar(255),
+  mobile varchar(255),
+  address varchar(255),
+  address2 varchar(255),
+  city varchar(255),
+  state varchar(255),
+  zip varchar(255),
+  country varchar(255),
+  homechurch varchar(255),
+  heardOfJwalk varchar(255)
+  );
+) -->

@@ -1,26 +1,17 @@
 <?php 
 
 /*
-Template Name: Test submit page
-Template Post Type: conference, 
+Template Name: Thank you for Registering page
+Template Post Type: Conference, 
 */
 
 get_header();
 
 //Defining variables and setting them to empty values.
 
-
-
-//Maybe create a function that is to be called which would redirect the page.
-
 if (isset($_POST["confSubmit"])) {
 
   global $wpdb; //Allows us access to MYsql without creating statements 
-
-  //These are the items that are to be sent to the database
-  //Will need to create the table before hand before sending these items.
-  // $data = array(
-  // );
 
   //This is the name of the table in the database
   $table_name = "wp_jwalk_conf_registration";
@@ -49,13 +40,10 @@ if (isset($_POST["confSubmit"])) {
 };
 ?>
 
-
-<div>
-<?php 
-    the_content();
-?>
-
-</div>
+<main class="">
+    <?php the_content();
+    ?>
+</main>
 
 <?php
 

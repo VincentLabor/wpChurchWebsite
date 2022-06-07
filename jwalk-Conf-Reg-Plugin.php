@@ -10,26 +10,53 @@
  */
 
 
- //Users is the prior table used to get the information
+//Users is the prior table used to get the information
 ?>
+
+<h1>Hello loser</h1>
 
 <?php
 
-if ( ! class_exists( 'WP_List_Table' ) ) {
-	require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
+
+
+add_action('init', 'wpforms_db_inits');
+
+function wpforms_db_inits(){
+    if( is_admin() ){
+        require_once 'inc/class-main-page.php';
+        require_once 'inc/class-sub-page.php';
+        require_once 'inc/class-form-details.php';
+        require_once 'inc/class-export-csv.php';
+
+        if( isset($_REQUEST['wpforms-csv']) && ( $_REQUEST['wpforms-csv'] == true ) && isset( $_REQUEST['nonce'] ) ) {
+
+            $nonce  = filter_input( INPUT_GET, 'nonce', FILTER_SANITIZE_STRING );
+
+            if ( ! wp_verify_nonce( $nonce, 'dnonce' ) ) wp_die('Invalid nonce..!!');
+            $csv = new WPForms_Export_CSVS();
+            $csv->download_csv_file();
+        }
+        new WPFormsDB_Wp_Main_Pages;
+    }
 }
 
-class Users_List extends WP_List_Table {
+
+if (!class_exists('WP_List_Table')) {
+	require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
+}
+
+class Users_List extends WP_List_Table
+{
 
 	/** Class constructor */
-	public function __construct() {
+	public function __construct()
+	{
 
-		parent::__construct( [
-			'singular' => __( 'User', 'sp' ), //singular name of the listed records
-			'plural'   => __( 'Users', 'sp' ), //plural name of the listed records
+		parent::__construct([
+			'singular' => __('User', 'sp'), //singular name of the listed records
+			'plural'   => __('Users', 'sp'), //plural name of the listed records
 			'ajax'     => false //does this table support ajax?
-		] );
-
+		]);
 	}
 
 
@@ -41,22 +68,23 @@ class Users_List extends WP_List_Table {
 	 *
 	 * @return mixed
 	 */
-	public static function get_users( $per_page = 5, $page_number = 1 ) {
+	public static function get_users($per_page = 20, $page_number = 1)
+	{
 
 		global $wpdb;
 
-		$sql = "SELECT * FROM {$wpdb->prefix}users, {$wpdb->prefix}wpforms_db";
-	
-		if ( ! empty( $_REQUEST['orderby'] ) ) {
-			$sql .= ' ORDER BY ' . esc_sql( $_REQUEST['orderby'] );
-			$sql .= ! empty( $_REQUEST['order'] ) ? ' ' . esc_sql( $_REQUEST['order'] ) : ' ASC';
+		$sql = "SELECT * FROM {$wpdb->prefix}jwalk_conf_registration";
+
+		if (!empty($_REQUEST['orderby'])) {
+			$sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
+			$sql .= !empty($_REQUEST['order']) ? ' ' . esc_sql($_REQUEST['order']) : ' ASC';
 		}
 
 		$sql .= " LIMIT $per_page";
-		$sql .= ' OFFSET ' . ( $page_number - 1 ) * $per_page;
+		$sql .= ' OFFSET ' . ($page_number - 1) * $per_page;
 
 
-		$result = $wpdb->get_results( $sql, 'ARRAY_A' );
+		$result = $wpdb->get_results($sql, 'ARRAY_A');
 
 		return $result;
 	}
@@ -67,13 +95,14 @@ class Users_List extends WP_List_Table {
 	 *
 	 * @param int $id customer ID
 	 */
-	public static function delete_user( $id ) {
+	public static function delete_user($id)
+	{
 		global $wpdb;
 
 		$wpdb->delete(
 			"{$wpdb->prefix}users",
-			[ 'ID' => $id ],
-			[ '%d' ]
+			['ID' => $id],
+			['%d']
 		);
 	}
 
@@ -83,18 +112,20 @@ class Users_List extends WP_List_Table {
 	 *
 	 * @return null|string
 	 */
-	public static function record_count() {
+	public static function record_count()
+	{
 		global $wpdb;
 
-		$sql = "SELECT COUNT(*) FROM {$wpdb->prefix}users";
+		$sql = "SELECT COUNT(*) FROM {$wpdb->prefix}jwalk_conf_registration";
 
-		return $wpdb->get_var( $sql );
+		return $wpdb->get_var($sql);
 	}
 
 
 	/** Text displayed when no user data is available */
-	public function no_items() {
-		_e( 'No users avaliable.', 'sp' );
+	public function no_items()
+	{
+		_e('No users avaliable.', 'sp');
 	}
 
 
@@ -106,16 +137,54 @@ class Users_List extends WP_List_Table {
 	 *
 	 * @return mixed
 	 */
-	public function column_default( $item, $column_name ) {
-		switch ( $column_name ) {
-			case 'user_email':
-				return $item[ 'user_email' ];
-			case 'display_name':
-				return $item[ 'display_name' ];
-			case 'form_post_id':
-				return $item[ 'form_id' ];
+	public function column_default($item, $column_name)
+	{
+		switch ($column_name) {
+			case 'firstName':
+				return $item['firstName'];
+			case 'ID':
+				return $item['ID'];
+			case 'lastName':
+				return $item['lastName'];
+			case 'email':
+				return $item['email'];
+			case 'typeOfReg':
+				return $item['typeOfReg'];
+			case 'gender':
+				return $item['gender'];
+			case 'birthday':
+				return $item['birthday'];
+			case 'grade':
+				return $item['grade'];
+			case 'shirtSize':
+				return $item['shirtSize'];
+			case 'mobile':
+				return $item['mobile'];
+			case 'address':
+				return $item['address'];
+			case 'address2':
+				return $item['address2'];
+			case 'city':
+				return $item['city'];
+			case 'state':
+				return $item['state'];
+			case 'zip':
+				return $item['zip'];
+			case 'country':
+				return $item['country'];
+			case 'homechurch':
+				return $item['homechurch'];
+			case 'heardOfJwalk':
+				return $item['heardOfJwalk'];
+
+				// case 'user_email':
+				// 	return $item[ 'user_email' ];
+				// case 'display_name':
+				// 	return $item[ 'display_name' ];
+				// case 'form_post_id':
+				// 	return $item[ 'form_id' ];
 			default:
-				return print_r( $item, true ); //Show the whole array for troubleshooting purposes
+				return print_r($item, true); //Show the whole array for troubleshooting purposes
 		}
 	}
 
@@ -126,10 +195,13 @@ class Users_List extends WP_List_Table {
 	 *
 	 * @return string
 	 */
-	function column_cb( $item ) {
-		return sprintf(
-			'<input type="checkbox" name="bulk-delete[]" value="%s" />', $item['ID']
-		);
+	function column_cb($item)
+	{
+		//Fix this
+		// return sprintf(
+		// 	'<input type="checkbox" name="bulk-delete[]" value="%s" />',
+		// 	$item['ID']
+		// );
 	}
 
 
@@ -140,17 +212,18 @@ class Users_List extends WP_List_Table {
 	 *
 	 * @return string
 	 */
-	function column_name( $item ) {
+	function column_name($item)
+	{
 
-		$delete_nonce = wp_create_nonce( 'sp_delete_user' );
+		$delete_nonce = wp_create_nonce('sp_delete_user');
 
 		$title = '<strong>' . $item['user_login'] . '</strong>';
 
 		$actions = [
-			'delete' => sprintf( '<a href="?page=%s&action=%s&user=%s&_wpnonce=%s">Delete</a>', esc_attr( $_REQUEST['page'] ), 'delete', absint( $item['ID'] ), $delete_nonce )
+			'delete' => sprintf('<a href="?page=%s&action=%s&user=%s&_wpnonce=%s">Delete</a>', esc_attr($_REQUEST['page']), 'delete', absint($item['ID']), $delete_nonce)
 		];
 
-		return $title . $this->row_actions( $actions );
+		return $title . $this->row_actions($actions);
 	}
 
 
@@ -159,13 +232,31 @@ class Users_List extends WP_List_Table {
 	 *
 	 * @return array
 	 */
-	function get_columns() {
+	function get_columns()
+	{
 		$columns = [
 			'cb'      => '<input type="checkbox" />',
-			'name'    => __( 'Name', 'sp' ),
-			'user_email' => __( 'Email', 'sp' ),
-			'display_name'    => __( 'Display Name', 'sp' ),
-			'form_post_id' => __('Form Id', 'sp'),
+			'ID' => __('ID', 'sp'),
+			'firstName' => __('First Name', 'sp'),
+			'lastName'    => __( 'Last Name', 'sp' ),
+			'email'    => __( 'Email', 'sp' ),
+			'typeOfReg'    => __( 'Reg Type', 'sp' ),
+			'gender'    => __( 'Gender', 'sp' ),
+			'birthday' => __('Birthday', 'sp'),
+			'grade' => __('Grade','sp'),
+			'shirtSize' => __("Shirt Size",'sp'),
+			'mobile' => __('Mobile', 'sp'),
+			'address' => __('Address', 'sp'),
+			'address2' => __('Address 2','sp'),
+			'city' => __('City','sp'),
+			'state'=> __('State','sp'),
+			'zip'=> __('ZIP','sp'),
+			'country'=> __('Country', 'sp'),
+			'homechurch'=>__('Home Church', 'sp'),
+			'heardOfJwalk'=>__('Heard Of Jesuswalk?','sp'),
+			// 'user_email' => __( 'Email', 'sp' ),
+			// 'display_name'    => __( 'Display Name', 'sp' ),
+			// 'form_post_id' => __('Form Id', 'sp'),
 		];
 
 		return $columns;
@@ -177,10 +268,11 @@ class Users_List extends WP_List_Table {
 	 *
 	 * @return array
 	 */
-	public function get_sortable_columns() {
+	public function get_sortable_columns()
+	{
 		$sortable_columns = array(
-			'name' => array( 'name', true ),
-			'city' => array( 'city', false )
+			'name' => array('name', true),
+			'city' => array('city', false)
 		);
 
 		return $sortable_columns;
@@ -191,7 +283,8 @@ class Users_List extends WP_List_Table {
 	 *
 	 * @return array
 	 */
-	public function get_bulk_actions() {
+	public function get_bulk_actions()
+	{
 		$actions = [
 			'bulk-delete' => 'Delete'
 		];
@@ -203,70 +296,70 @@ class Users_List extends WP_List_Table {
 	/**
 	 * Handles data query and filter, sorting, and pagination.
 	 */
-	public function prepare_items() {
+	public function prepare_items()
+	{
 
 		$this->_column_headers = $this->get_column_info();
 
 		/** Process bulk action */
 		$this->process_bulk_action();
 
-		$per_page     = $this->get_items_per_page( 'users_per_page', 5 );
+		$per_page     = $this->get_items_per_page('users_per_page', 20);
 		$current_page = $this->get_pagenum();
 		$total_items  = self::record_count();
 
-		$this->set_pagination_args( [
+		$this->set_pagination_args([
 			'total_items' => $total_items, //WE have to calculate the total number of items
 			'per_page'    => $per_page //WE have to determine how many items to show on a page
-		] );
+		]);
 
-		$this->items = self::get_users( $per_page, $current_page );
+		$this->items = self::get_users($per_page, $current_page);
 	}
 
-	public function process_bulk_action() {
+	public function process_bulk_action()
+	{
 
 		//Detect when a bulk action is being triggered...
-		if ( 'delete' === $this->current_action() ) {
+		if ('delete' === $this->current_action()) {
 
 			// In our file that handles the request, verify the nonce.
-			$nonce = esc_attr( $_REQUEST['_wpnonce'] );
+			$nonce = esc_attr($_REQUEST['_wpnonce']);
 
-			if ( ! wp_verify_nonce( $nonce, 'sp_delete_user' ) ) {
-				die( 'Go get a life script kiddies' );
-			}
-			else {
-				self::delete_user( absint( $_GET['user'] ) );
+			if (!wp_verify_nonce($nonce, 'sp_delete_user')) {
+				die('Go get a life script kiddies');
+			} else {
+				self::delete_user(absint($_GET['user']));
 
-		                // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
-		                // add_query_arg() return the current url
-		                wp_redirect( esc_url_raw(add_query_arg()) );
+				// esc_url_raw() is used to prevent converting ampersand in url to "#038;"
+				// add_query_arg() return the current url
+				wp_redirect(esc_url_raw(add_query_arg()));
 				exit;
 			}
-
 		}
 
 		// If the delete bulk action is triggered
-		if ( ( isset( $_POST['action'] ) && $_POST['action'] == 'bulk-delete' )
-		     || ( isset( $_POST['action2'] ) && $_POST['action2'] == 'bulk-delete' )
+		if ((isset($_POST['action']) && $_POST['action'] == 'bulk-delete')
+			|| (isset($_POST['action2']) && $_POST['action2'] == 'bulk-delete')
 		) {
 
-			$delete_ids = esc_sql( $_POST['bulk-delete'] );
+			$delete_ids = esc_sql($_POST['bulk-delete']);
 
 			// loop over the array of record IDs and delete them
-			foreach ( $delete_ids as $id ) {
-				self::delete_user( $id );
-
+			foreach ($delete_ids as $id) {
+				self::delete_user($id);
 			}
 
 			// esc_url_raw() is used to prevent converting ampersand in url to "#038;"
-		        // add_query_arg() return the current url
-		        wp_redirect( esc_url_raw(add_query_arg()) );
+			// add_query_arg() return the current url
+			wp_redirect(esc_url_raw(add_query_arg()));
 			exit;
 		}
 	}
 }
 
 
-class SP_Plugin {
+class SP_Plugin
+{
 
 	// class instance
 	static $instance;
@@ -275,36 +368,39 @@ class SP_Plugin {
 	public $users_obj;
 
 	// class constructor
-	public function __construct() {
-		add_filter( 'set-screen-option', [ __CLASS__, 'set_screen' ], 10, 3 );
-		add_action( 'admin_menu', [ $this, 'plugin_menu' ] );
+	public function __construct()
+	{
+		add_filter('set-screen-option', [__CLASS__, 'set_screen'], 10, 3);
+		add_action('admin_menu', [$this, 'plugin_menu']);
 	}
 
 
-	public static function set_screen( $status, $option, $value ) {
+	public static function set_screen($status, $option, $value)
+	{
 		return $value;
 	}
 
-	public function plugin_menu() {
+	public function plugin_menu()
+	{
 
 		$hook = add_menu_page(
 			'JwalkUserRegistration',
 			'Jesuswalk Conference Registration',
 			'manage_options',
 			'wp_jwalk_conf_registration',
-			[ $this, 'plugin_settings_page' ]
+			[$this, 'plugin_settings_page']
 		);
 
-		add_action( "load-$hook", [ $this, 'screen_option' ] );
-
+		add_action("load-$hook", [$this, 'screen_option']);
 	}
 
 
 	/**
 	 * Plugin settings page
 	 */
-	public function plugin_settings_page() {
-		?>
+	public function plugin_settings_page()
+	{
+?>
 		<div class="wrap">
 			<h2>Jesuswalk Youth Conference Registration</h2>
 
@@ -323,39 +419,40 @@ class SP_Plugin {
 				<br class="clear">
 			</div>
 		</div>
-	<?php
+<?php
 	}
 
 	/**
 	 * Screen options
 	 */
-	public function screen_option() {
+	public function screen_option()
+	{
 
 		$option = 'per_page';
 		$args   = [
 			'label'   => 'users',
-			'default' => 5,
+			'default' => 20,
 			'option'  => 'users_per_page'
 		];
 
-		add_screen_option( $option, $args );
+		add_screen_option($option, $args);
 
 		$this->users_obj = new Users_List();
 	}
 
 
 	/** Singleton instance */
-	public static function get_instance() {
-		if ( ! isset( self::$instance ) ) {
+	public static function get_instance()
+	{
+		if (!isset(self::$instance)) {
 			self::$instance = new self();
 		}
 
 		return self::$instance;
 	}
-
 }
 
 
-add_action( 'plugins_loaded', function () {
+add_action('plugins_loaded', function () {
 	SP_Plugin::get_instance();
-} );
+});
