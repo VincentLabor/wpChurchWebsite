@@ -108,10 +108,7 @@ $container = get_theme_mod('understrap_container_type');
 					</div><!-- .container -->
 
 					<div class="centerflexColumn width90">
-
-						<a href="https://www.jesuswalkyouth.com/prayer-request/" class=" fontSz14 footeritems">Prayer request</a>
-						<a href="https://www.jesuswalkyouth.com/counselor-program/" class=" fontSz14 footeritems">Counselor Program</a>
-						<a href="https://www.jesuswalkyouth.com/covid-19-response/" class=" fontSz14 footeritems">Covid 19 Response</a>
+						
 					</div>
 
 				<?php endif; ?>

@@ -7077,20 +7077,24 @@ const navMenuBtn = document.getElementById("navIcon");
 
 navMenuBtn.onclick = () => {
   if (openNavMenu === false) {
-    openNavMenu = !openNavMenu;
-    document.getElementById("navMenu").classList.remove("hidden"); //This is necessary because the data-toggle in header affects the footnav
+    setTimeout(() => {
+      openNavMenu = !openNavMenu;
+      document.getElementById("navMenu").classList.remove("hidden"); //This is necessary because the data-toggle in header affects the footnav
 
-    document.getElementById("footerNav").classList.add("hidden");
-    document.body.classList.add("removeScrollbar");
-    console.log("Clicked");
+      document.getElementById("footerNav").classList.add("hidden");
+      document.body.classList.add("removeScrollbar");
+      console.log("Clicked");
+    }, 5000);
   } else {
-    openNavMenu = !openNavMenu;
-    document.getElementById("navMenu").classList.add("hidden"); //This is necessary because the data-toggle in header affects the footnav
+    setTimeout(() => {
+      openNavMenu = !openNavMenu;
+      document.getElementById("navMenu").classList.add("hidden"); //This is necessary because the data-toggle in header affects the footnav
 
-    document.getElementById("footerNav").classList.remove("hidden");
-    document.body.classList.remove("removeScrollbar"); //Lol change idiot.
+      document.getElementById("footerNav").classList.remove("hidden");
+      document.body.classList.remove("removeScrollbar"); //Lol change idiot.
 
-    console.log("clicked on");
+      console.log("clicked on");
+    }, 5000);
   }
 };
 //This is the checkbox that certifies that the user agrees to all the conditions.
@@ -7098,16 +7102,32 @@ const agreement = document.getElementById("agreeToParticipate"); //This is the s
 
 const submitBtn = document.getElementById("regSubmitBtn");
 const errorTxt = document.getElementById("errorText");
-const agree2Part = document.getElementById("agreeToParticipate");
+const agree2Part = document.getElementById("agreeToParticipate"); // let $form = $('form#test-form');
 
-submitBtn.onclick = () => {
-  console.log("This button has been clicked.");
-  console.log(document.querySelector('#agreeToParticipate').value);
+let form = document.getElementById('sheetdb-form');
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(document.getElementById("sheetdb-form"))
+  }).then(response => response.json()).then(html => {
+    window.open('d.html', '_blank');
+  });
+}); // submitBtn.onclick = (e)=>{
+// 	console.log("This button has been clicked.");
+//     var jqxhr = $.ajax({
+//         url: url,
+//         method: "GET",
+//         dataType: "json",
+//         data: $form.serializeObject()
+//     })
+// fetch('https://script.google.com/macros/s/AKfycbwsL-CYYP_V4vqTznrfQIZ2Gqbzh0w_TvamVgWi4pazgd_TClv9l8ry_bkvSJFMy4El/exec')
+// .then((response)=>response.json)
+// .then((data)=>console.log(data));
 
-  if (document.querySelector('#agreeToParticipate').checked) {
-    window.open("https://givebutter.com/PFVLSZ", '_blank');
-  } else {
-    errorTxt.innerHTML = "Please agree before moving forward.";
-  } // agreement.requirement = true;
-
-};
+if (document.querySelector('#agreeToParticipate').checked) {
+  window.open("https://givebutter.com/PFVLSZ", '_blank'); //http://localhost/wordpress/conferences/thank-you-for-registering/
+} else {
+  //This has to be edited later for the text to be red. 
+  errorTxt.innerHTML = "Please agree before moving forward.";
+} // agreement.requirement = true;

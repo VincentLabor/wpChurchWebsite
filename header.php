@@ -24,6 +24,7 @@ $container = get_theme_mod('understrap_container_type');
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<script src="jquery-3.6.0.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -44,7 +45,15 @@ $container = get_theme_mod('understrap_container_type');
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e('Main Navigation', 'understrap'); ?>
 			</h2>
-
+			
+			<!-- <div class="hello">
+				<a href="/" class="">
+					<i class="fa fa-home fa-lg " aria-hidden="true"></i>
+				</a>
+				<button class="navbar-toggler navMenu flexspace " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="">
+					<i id="navIcon" class="fa fa-bars"></i>
+				</button>
+			</div> -->
 
 			<div class="container whiteText letterSpace ">
 

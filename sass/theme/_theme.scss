@@ -6,6 +6,10 @@ $backgroundColorCyan: #689eb8;
 $darkCyan: #005a7a;
 
 //The reason why the hover for everything was red was because of _reboot.scss at 185.
+//The way to use the gulp in the commandline is 
+//gulp sass
+//Wait 10 hours. Not really
+//Gulp minifycss incase it didnt workl
 
 //This is variables for screen sizes
 // $phone: 18em;
@@ -146,8 +150,20 @@ div .fillWidth a .reduceSpacingMar {
 	background: #1c1c1c;
 }
 
+.backgroundSched{
+	height: 85vh;
+	background: #1c1c1c;
+	background-size: cover;
+	padding-top: 6em;
+	background-image: url(../img/martin-sanchez-gwJ8VFGqhPk-unsplash.png) !important;
+}
+
 .whiteBg {
 	background: #fff;
+}
+
+.brownBg{
+	background: #A68A64;
 }
 
 .graybackground {
@@ -713,7 +729,7 @@ svg path {
 	}
 
 	.bgimage {
-		background-image: url(../img/JW2022_Website_340w.png) !important;
+		background-image: url(../img/Overcome_Theme.png) !important;
 		background-repeat: no-repeat;
 		background-position: center;
 	}
@@ -726,7 +742,7 @@ svg path {
 }
 @media screen and (max-width: 390px) {
 	.bgimage {
-		background-image: url(../img/JW2022_Website_375w.png);
+		background-image: url(../img/Overcome_Theme.png);
 		background-repeat: no-repeat;
 		background-position: center;
 	}
@@ -741,7 +757,7 @@ svg path {
 //This is for the mobile view
 @media screen and (max-width: 480px) {
 	.bgimage {
-		background-image: url(../img/JW2022_Website_420w.png);
+		background-image: url(../img/Overcome_Theme.png);
 		background-repeat: no-repeat;
 		background-position: center;
 	}
@@ -784,7 +800,7 @@ svg path {
 	}
 
 	.bgimage {
-		background-image: url(../img/JW2022_Website_420w.png);
+		background-image: url(../img/Overcome800.png);
 		background-repeat: no-repeat;
 		// background-attachment: fixed;
 		background-position: center;
@@ -900,7 +916,7 @@ svg path {
 //$md: 768px;
 @media screen and (min-width: $md) {
 	.bgimage {
-		background-image: url(../img/JW2022_Website_800w.png);
+		background-image: url(../img/Overcome_Theme.png);
 		background-repeat: no-repeat;
 		// background-attachment: fixed;
 		background-position: center;
@@ -951,7 +967,7 @@ svg path {
 	}
 
 	.bgimage {
-		background-image: url(../img/JW2022_Website_1920w.png);
+		background-image: url(../img/Overcome_Theme.png);
 		// height: 100vh;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -986,7 +1002,7 @@ svg path {
 	}
 
 	.bgimage {
-		background-image: url(../img/JW2022_Website_1920w.png);
+		background-image: url(../img/Overcome_Theme.png);
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center;
@@ -1080,6 +1096,21 @@ svg path {
 Styling for the Conference registration form!
 
 */
+
+form#sheetdb-form input[type="text"]{
+	width: 20em;
+}
+form#sheetdb-form select{
+	width: 20em;
+}
+
+.widthForForm{
+	width: 10em;
+}
+
+.bulletSpace{
+	width: 10em;
+}
 
 #wpforms-1760 div.wpforms-container-full .wpforms-form .wpforms-title {
 	font-size: 35px !important;
